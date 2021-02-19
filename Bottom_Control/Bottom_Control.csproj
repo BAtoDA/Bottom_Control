@@ -183,9 +183,26 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="第三方控件DLL\快速访问 - 快捷方式.lnk" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="第三方控件DLL\CSkin.dll" />
+    <Content Include="第三方控件DLL\CSkin.XML" />
+    <Content Include="第三方控件DLL\CSScriptLibrary.dll" />
+    <Content Include="第三方控件DLL\HslCommunication.dll" />
+    <Content Include="第三方控件DLL\HZH_Controls.dll" />
+    <Content Include="第三方控件DLL\HZH_Controls.pdb" />
+    <Content Include="第三方控件DLL\Install_deployment.dll" />
+    <Content Include="第三方控件DLL\Install_deployment.pdb" />
+    <Content Include="第三方控件DLL\Interop.ActUtlTypeLib.dll" />
+    <Content Include="第三方控件DLL\Microsoft.Graph.Core.dll" />
+    <Content Include="第三方控件DLL\SunnyUI.dll" />
+    <Content Include="第三方控件DLL\System.Buffers.dll" />
+    <Content Include="第三方控件DLL\System.Buffers.xml" />
+    <Content Include="第三方控件DLL\UI_Library_da.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
