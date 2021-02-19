@@ -12,32 +12,38 @@ namespace Bottom_Control.PLC参数设置界面
 {
     public partial class ComboxForm1 : Sunny.UI.UIForm
     {
-        private List<KeyValuePair<int, string>> KeyValuePair;
-        public ComboxForm1(List<KeyValuePair<int,string>> keyValue)
+        int[] key;
+        string[] Data;
+        public ComboxForm1(int[] key,string[] Data)
         {
             InitializeComponent();
-            this.KeyValuePair = keyValue;
+            this.key = key;
+            this.Data = Data;
         }
 
         private void ComboxForm1_Load(object sender, EventArgs e)
         {
             this.uiDataGridView1.Rows.Add();
-            for (int i=0;i<this.KeyValuePair.Count;i++)
+            for (int i=0;i<this.key.Length; i++)
             {
-                this.uiDataGridView1.Rows[i].Cells[0].Value = KeyValuePair[i].Key;
-                this.uiDataGridView1.Rows[i].Cells[1].Value = KeyValuePair[i].Value;
+                this.uiDataGridView1.Rows[i].Cells[0].Value = key[i];
+                this.uiDataGridView1.Rows[i].Cells[1].Value = Data[i];
                 this.uiDataGridView1.Rows.Add();
             }
         }
-        public List<KeyValuePair<int, string>> keyValuePairs;
+
+        public int[] keydata { get; set; }
+        public string[] Value { get; set; }
         private void uiButton1_Click(object sender, EventArgs e)
         {
-            keyValuePairs = new List<KeyValuePair<int, string>>();
-            for(int i=0;i<this.uiDataGridView1.Rows.Count;i++)
+            keydata = new int[this.uiDataGridView1.Rows.Count];
+            Value=new string[this.uiDataGridView1.Rows.Count];
+            for (int i=0;i<this.uiDataGridView1.Rows.Count;i++)
             {
                 if(this.uiDataGridView1.Rows[i].Cells[0].Value!=null)
                 {
-                    keyValuePairs.Add(new KeyValuePair<int, string>(Convert.ToInt32(this.uiDataGridView1.Rows[i].Cells[0].Value), this.uiDataGridView1.Rows[i].Cells[1].Value.ToString()));
+                    keydata[i] = Convert.ToInt32(this.uiDataGridView1.Rows[i].Cells[0].Value);
+                    Value[i] = this.uiDataGridView1.Rows[i].Cells[1].Value.ToString();
                 }
             }
             this.Close();

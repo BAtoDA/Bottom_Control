@@ -128,6 +128,7 @@ namespace Bottom_Control.设置控件
             Lock_control = true;
             //配置该控件默认参数
             this.Enabled = false;
+            this.Interval = 500;
             mutex = new System.Threading.Mutex();
             //配置PLC参数
             Mitsubishi.IPEndPoint = new IPEndPoint(Mitsubishi_ip, MitsubishiPort);

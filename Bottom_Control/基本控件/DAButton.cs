@@ -156,13 +156,12 @@ namespace Bottom_Control
         /// </summary>
         /// <param name="send"></param>
         /// <param name="e"></param>
-        private void Time_tick(object send,EventArgs e)
+        private void Time_tick(object send, EventArgs e)
         {
             if (!plc_Enable) return;//用户不开启PLC功能
-            lock (this)
-            {
-                plc.Refresh(this, this.Plc);
-            }
+
+            plc.Refresh(this, this.Plc);
+
         }
     }
 }

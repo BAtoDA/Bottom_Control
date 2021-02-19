@@ -21,9 +21,13 @@ namespace Bottom_Control.控件类基
     interface Combox_base
     {
         /// <summary>
-        /// 下拉菜单对应参数
+        /// 下拉菜单KEY值
         /// </summary>
-         List<KeyValuePair<int, string>> KeyValuePair { get; set; }
+        int[] KeyValuePair { get;}
+        /// <summary>
+        /// 下拉菜单Value 显示名称值
+        /// </summary>
+        string[] ValuePair { get;}
         /// <summary>
         /// 修改下拉菜单参数界面启动事件
         /// </summary>

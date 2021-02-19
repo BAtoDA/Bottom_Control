@@ -9,7 +9,7 @@ using Bottom_Control.按钮__TO__PLC方法;
 using Bottom_Control.控件类基;
 using Bottom_Control.文本__TO__PLC方法;
 using HZH_Controls.Controls;
-
+using System.Windows.Forms;
 namespace Bottom_Control.基本控件
 {
     //==============================================================
@@ -38,6 +38,9 @@ namespace Bottom_Control.基本控件
                     this.Modification += new EventHandler(Modifications_Eeve);
                     this.Modification(Convert.ToInt32(pLC_valu), new EventArgs());
                     this.Modification -= new EventHandler(Modifications_Eeve);
+                    this.Combox_Modification += Combox_Modifications_Eeve;
+                    this.Combox_Modification(this, new EventArgs());
+                    this.Combox_Modification -= Combox_Modifications_Eeve;
                 }
             }
         }
@@ -98,24 +101,29 @@ namespace Bottom_Control.基本控件
         [Description("文本刷新定时器"), Category("PLC-控件参数")]
         [DefaultValue(typeof(string), "PLC_time")]
         public System.Windows.Forms.Timer PLC_time { get; } = new System.Windows.Forms.Timer() { Enabled = true, Interval = 200 };
-        [Description("下拉菜单参数"), Category("PLC-控件参数")]
-        public List<KeyValuePair<int, string>> KeyValuePair 
+        [Description("下拉菜单Key值 指示着需要写入PLC的值"), Category("PLC-控件参数")]
+        public int[] KeyValuePair 
         {
-            get => keyValue;
-            set
-            {
-                this.Combox_Modification += Combox_Modifications_Eeve;
-                this.Combox_Modification(keyValue, new EventArgs());
-                this.Combox_Modification -= Combox_Modifications_Eeve;
-            }
+            get;
+            set;
         }
-        private List<KeyValuePair<int, string>> keyValue = new List<KeyValuePair<int, string>>() { new KeyValuePair<int, string>(1, "PLC1") };
+        private int[] keyValuePair=new int[10];
+        [Description("下拉菜单Value值 指示着用户选中的值"), Category("PLC-控件参数")]
+        public string[] ValuePair 
+        {
+            get;
+            set;
+        }
+        private string[] valuePair=new string[10];
         public void Combox_Modifications_Eeve(object send, EventArgs e)
         {
-            ComboxForm1 buttonBitForm = new ComboxForm1(KeyValuePair);
+            ComboxForm1 buttonBitForm = new ComboxForm1(this.KeyValuePair??new int[] {1 },this.ValuePair??new string[] { "PLC1"});
             buttonBitForm.ShowDialog();
-            if (buttonBitForm.keyValuePairs.Count>0) return;
-            keyValue = buttonBitForm.keyValuePairs;
+            this.Combox_Modification -= Combox_Modifications_Eeve;
+            if (buttonBitForm.keydata.Length<0) return;
+            keyValuePair = buttonBitForm.keydata;
+            valuePair = buttonBitForm.Value;
+            MessageBox.Show("SS");
         }
         /// <summary>
         /// PLC通讯对象
@@ -133,8 +141,18 @@ namespace Bottom_Control.基本控件
         }
         private new void SelectedChangedEvent(object sender, EventArgs e)
         {
-
+            MessageBox.Show("DD");
         }
+        protected override void OnLoad(EventArgs e)
+        {
+            List<KeyValuePair<string, string>> valuePairs = new List<KeyValuePair<string, string>>();
+            for (int i = 0; i < KeyValuePair.Length; i++)
+            {
+                valuePairs.Add(new KeyValuePair<string, string>(this.KeyValuePair[i].ToString(), this.ValuePair[i]));
+            }
+            this.Source = valuePairs;
+        }
+
         /// <summary>
         /// 定时器到达事件
         /// </summary>
