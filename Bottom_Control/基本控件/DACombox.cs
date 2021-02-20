@@ -38,9 +38,9 @@ namespace Bottom_Control.基本控件
                     this.Modification += new EventHandler(Modifications_Eeve);
                     this.Modification(Convert.ToInt32(pLC_valu), new EventArgs());
                     this.Modification -= new EventHandler(Modifications_Eeve);
-                    this.Combox_Modification += Combox_Modifications_Eeve;
-                    this.Combox_Modification(this, new EventArgs());
-                    this.Combox_Modification -= Combox_Modifications_Eeve;
+                    //this.Combox_Modification += Combox_Modifications_Eeve;
+                    //this.Combox_Modification(this, new EventArgs());
+                    //this.Combox_Modification -= Combox_Modifications_Eeve;
                 }
             }
         }
@@ -94,7 +94,27 @@ namespace Bottom_Control.基本控件
         [Description("设置访问PLC小数点以下几位"), Category("PLC-控件参数")]
         [DefaultValue(typeof(int), "0")]
         public int Decimal_Below { get; set; } = 0;
-        public string Control_Text { get => this.Text; set => this.Text = value; }
+        public string Control_Text 
+        {
+            get
+            {
+                if (this.Source !=null)
+                    return KeyValuePair[ this.Source.Count>0? this.SelectedIndex:0].ToString();
+                else
+                   return this.TextValue??"00";
+            }
+            set
+            {
+                if (this.Source != null)
+                {
+                    for (int i = 0; i < this.Source.Count; i++)
+                    {
+                        if (this.Source[i].Key == value)
+                            this.SelectedIndex = i;
+                    }
+                }
+            }
+        }
         /// <summary>
         /// 定时刷新 定时器
         /// </summary>
@@ -102,28 +122,15 @@ namespace Bottom_Control.基本控件
         [DefaultValue(typeof(string), "PLC_time")]
         public System.Windows.Forms.Timer PLC_time { get; } = new System.Windows.Forms.Timer() { Enabled = true, Interval = 200 };
         [Description("下拉菜单Key值 指示着需要写入PLC的值"), Category("PLC-控件参数")]
-        public int[] KeyValuePair 
-        {
-            get;
-            set;
-        }
-        private int[] keyValuePair=new int[10];
+        public int[] KeyValuePair { get; set; } = new int[10];
         [Description("下拉菜单Value值 指示着用户选中的值"), Category("PLC-控件参数")]
-        public string[] ValuePair 
-        {
-            get;
-            set;
-        }
-        private string[] valuePair=new string[10];
+        public string[] ValuePair { get; set; } = new string[10];
         public void Combox_Modifications_Eeve(object send, EventArgs e)
         {
             ComboxForm1 buttonBitForm = new ComboxForm1(this.KeyValuePair??new int[] {1 },this.ValuePair??new string[] { "PLC1"});
             buttonBitForm.ShowDialog();
             this.Combox_Modification -= Combox_Modifications_Eeve;
             if (buttonBitForm.keydata.Length<0) return;
-            keyValuePair = buttonBitForm.keydata;
-            valuePair = buttonBitForm.Value;
-            MessageBox.Show("SS");
         }
         /// <summary>
         /// PLC通讯对象
@@ -139,18 +146,25 @@ namespace Bottom_Control.基本控件
             PLC_time.Start();
             PLC_time.Tick += new EventHandler(Time_tick);
         }
-        private new void SelectedChangedEvent(object sender, EventArgs e)
+        protected void DACombox_SelectedChangedEvent(object sender, EventArgs e)//如果用户改变索引 把当前值写入PLC中
         {
-            MessageBox.Show("DD");
+            this.pLC.plc(this);
         }
         protected override void OnLoad(EventArgs e)
         {
             List<KeyValuePair<string, string>> valuePairs = new List<KeyValuePair<string, string>>();
             for (int i = 0; i < KeyValuePair.Length; i++)
             {
-                valuePairs.Add(new KeyValuePair<string, string>(this.KeyValuePair[i].ToString(), this.ValuePair[i]));
+                if (ValuePair[i] != null)
+                    valuePairs.Add(new KeyValuePair<string, string>(this.KeyValuePair[i].ToString(), this.ValuePair[i]));
             }
             this.Source = valuePairs;
+            if(this.Source.Count>1)
+            {
+                this.SelectedIndex = 0;
+                this.TextValue = this.Source[0].Value;
+            }
+            this.SelectedChangedEvent += new EventHandler(DACombox_SelectedChangedEvent);
         }
 
         /// <summary>

@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="plC_Open_Time1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="daCombox1.Source" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAMYCbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1u
@@ -130,19 +133,13 @@
         c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljLktleVZhbHVlUGFpcmAyW1tTeXN0ZW0uU3RyaW5nLCBtc2Nv
         cmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1
         YzU2MTkzNGUwODldLFtTeXN0ZW0uU3RyaW5nLCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0
-        dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldXVtdCAgCAAAACQMAAAAK
-        AAAACgAAAAwEAAAA9wFtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1
+        dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldXVtdCAgCAAAACQMAAAAA
+        AAAAAAAAAAwEAAAA9wFtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1
         YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldLFtTeXN0ZW0uU3RyaW5nLCBtc2NvcmxpYiwgVmVy
         c2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUw
         ODldXSwgbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlU
-        b2tlbj1iNzdhNWM1NjE5MzRlMDg5BwMAAAAAAQAAABAAAAAEOFN5c3RlbS5Db2xsZWN0aW9ucy5HZW5l
-        cmljLktleVZhbHVlUGFpcmAyW1tTeXN0ZW0uU3RyaW5nBAAAAAX7////OFN5c3RlbS5Db2xsZWN0aW9u
-        cy5HZW5lcmljLktleVZhbHVlUGFpcmAyW1tTeXN0ZW0uU3RyaW5nAgAAAANrZXkFdmFsdWUBAQQAAAAG
-        BgAAAAIyMgYHAAAAAmRkAfj////7////BgkAAAACNTUGCgAAAAJkZAH1////+////wYMAAAAATAKAfP/
-        ///7////Bg4AAAABMAoB8f////v///8GEAAAAAEwCgHv////+////wYSAAAAATAKAe3////7////BhQA
-        AAABMAoB6/////v///8GFgAAAAEwCgHp////+////wYYAAAAATAKAef////7////BhoAAAABMAoB5f//
-        //v///8KCgHk////+////woKAeP////7////CgoB4v////v///8KCgHh////+////woKAeD////7////
-        CgoL
+        b2tlbj1iNzdhNWM1NjE5MzRlMDg5BwMAAAAAAQAAAAAAAAAEOFN5c3RlbS5Db2xsZWN0aW9ucy5HZW5l
+        cmljLktleVZhbHVlUGFpcmAyW1tTeXN0ZW0uU3RyaW5nBAAAAAs=
 </value>
   </data>
 </root>

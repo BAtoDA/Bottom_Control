@@ -30,8 +30,15 @@ namespace Bottom_Control
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            this.plC_Open_Time1 = new Bottom_Control.设置控件.PLC_Open_Time();
             this.daCombox1 = new Bottom_Control.基本控件.DACombox();
             this.SuspendLayout();
+            // 
+            // plC_Open_Time1
+            // 
+            this.plC_Open_Time1.Interval = 500;
+            this.plC_Open_Time1.Mitsubishi_Open = true;
+            this.plC_Open_Time1.ModBusIP = "192.168.3.20";
             // 
             // daCombox1
             // 
@@ -39,7 +46,7 @@ namespace Bottom_Control
             this.daCombox1.BackColorExt = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.daCombox1.BoxStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
             this.daCombox1.ConerRadius = 5;
-            this.daCombox1.Control_Text = "";
+            this.daCombox1.Control_Text = "1";
             this.daCombox1.DropPanelHeight = -1;
             this.daCombox1.FillColor = System.Drawing.Color.White;
             this.daCombox1.Font = new System.Drawing.Font("微软雅黑", 12F);
@@ -47,8 +54,8 @@ namespace Bottom_Control
             this.daCombox1.IsShowRect = true;
             this.daCombox1.ItemWidth = 70;
             this.daCombox1.KeyValuePair = new int[] {
-        22,
-        55,
+        1,
+        2,
         0,
         0,
         0,
@@ -57,12 +64,12 @@ namespace Bottom_Control
         0,
         0,
         0};
-            this.daCombox1.Location = new System.Drawing.Point(225, 146);
+            this.daCombox1.Location = new System.Drawing.Point(272, 153);
             this.daCombox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.daCombox1.Name = "daCombox1";
             this.daCombox1.PLC_Address = "0";
             this.daCombox1.PLC_Contact = "D";
-            this.daCombox1.PLC_Enable = false;
+            this.daCombox1.PLC_Enable = true;
             this.daCombox1.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
             this.daCombox1.RectWidth = 1;
             this.daCombox1.SelectedIndex = -1;
@@ -73,8 +80,8 @@ namespace Bottom_Control
             this.daCombox1.TextValue = null;
             this.daCombox1.TriangleColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(59)))));
             this.daCombox1.ValuePair = new string[] {
-        "dd",
-        "dd",
+        "PLC1",
+        "PLC2",
         null,
         null,
         null,
@@ -99,6 +106,7 @@ namespace Bottom_Control
 
         #endregion
 
+        private 设置控件.PLC_Open_Time plC_Open_Time1;
         private 基本控件.DACombox daCombox1;
     }
 }

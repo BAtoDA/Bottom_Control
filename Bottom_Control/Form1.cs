@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Bottom_Control.PLC参数设置界面;
 
 namespace Bottom_Control
 {
@@ -20,11 +19,8 @@ namespace Bottom_Control
 
         private void Form1_Load(object sender, EventArgs e)
         {
-        }
-
-        private void daCombox1_SelectedChangedEvent(object sender, EventArgs e)
-        {
-
+            this.plC_Open_Time1.Enabled = true;
+            this.plC_Open_Time1.Start();
         }
     }
 }
