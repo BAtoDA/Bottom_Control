@@ -216,6 +216,9 @@ namespace Bottom_Control.PLC通讯协议
                             // 读取uint变量
                             readResultRender(melsec_net.ReadUIntFromPLC(Name.Trim() + id.Trim()), Name.Trim() + id.Trim(), ref result);
                             break;
+                        case numerical_format.String_32_Bit:
+                            readResultRender(melsec_net.ReadStringFromPLC(Name.Trim() + id.Trim(),10), Name.Trim() + id.Trim(), ref result);
+                            break;
                     }
                     mutex.ReleaseMutex();
                 }
@@ -269,6 +272,9 @@ namespace Bottom_Control.PLC通讯协议
                             break;
                         case numerical_format.Unsigned_32_Bit:
                             writeResultRender(melsec_net.WriteIntoPLC(Name.Trim() + id.Trim(), int.Parse(content)), Name.Trim() + id.Trim());
+                            break;
+                        case numerical_format.String_32_Bit:
+                            writeResultRender(melsec_net.WriteAsciiStringIntoPLC(Name.Trim() + id.Trim(), content), Name.Trim() + id.Trim());
                             break;
                     }
                     mutex.ReleaseMutex();

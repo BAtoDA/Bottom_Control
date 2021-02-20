@@ -16,5 +16,11 @@ namespace Bottom_Control
         {
             InitializeComponent();
         }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            this.plC_Open_Time1.Enabled = true;
+            this.plC_Open_Time1.Start();
+        }
     }
 }

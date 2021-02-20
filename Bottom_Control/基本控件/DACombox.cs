@@ -17,10 +17,16 @@ namespace Bottom_Control.基本控件
     //  时间：2021/2/19 8:46:43 
     //  文件名：DACombox 
     //  版本：V1.0.1  
-    //  说明： 实现控件上下左右对齐
+    //  说明： 实现上位机底层控件 下拉菜单类 -不再公共运行时
     //  修改者：***
     //  修改说明： 
     //==============================================================
+    /// <summary>
+    /// 实现上位机底层控件 下拉菜单类 -不再公共运行时
+    /// </summary>
+    [ToolboxItem(true)]
+    [Browsable(true)]
+    [Description("实现上位机底层控件 下拉菜单类 不再公共运行时 ")]
     class DACombox: UCCombox, TextBox_base, Combox_base
     {
         #region 实现接口参数
@@ -178,6 +184,11 @@ namespace Bottom_Control.基本控件
             {
                 pLC.Refresh(this);
             }
+        }
+        protected override void Dispose(bool disposing)//重写释放托管资源
+        {
+            this.PLC_time.Dispose();
+            base.Dispose(disposing);
         }
     }
 }

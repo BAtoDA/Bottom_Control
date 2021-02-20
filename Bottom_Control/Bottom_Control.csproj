@@ -103,6 +103,9 @@
     <Compile Include="基本控件\DAAnalogMeter.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="基本控件\DABottle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="基本控件\DAButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -112,7 +115,25 @@
     <Compile Include="基本控件\DACombox.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="基本控件\DAConduit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="基本控件\DALedBulb.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="基本控件\DAMeter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="基本控件\DAPond.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="基本控件\DAProcessEllipse.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="基本控件\DAProcessWave.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="基本控件\DARotor.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="基本控件\DASwitch.cs">

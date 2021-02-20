@@ -137,5 +137,10 @@ namespace Bottom_Control.基本控件
                 pLC.Refresh(this);
             }
         }
+        protected override void Dispose(bool disposing)//重写释放托管资源
+        {
+            this.PLC_time.Dispose();
+            base.Dispose(disposing);
+        }
     }
 }

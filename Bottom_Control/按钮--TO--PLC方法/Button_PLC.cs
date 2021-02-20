@@ -246,6 +246,22 @@ namespace Bottom_Control.按钮__TO__PLC方法
                     daSwitch.FalseColor = daSwitch.Backdrop_OFF;
                     daSwitch.TrueColor = daSwitch.Backdrop_ON;
                     break;
+                case "DAConduit":
+                    DAConduit daConduit = button as DAConduit;
+                    daConduit.Text = button_State == Button_state.ON ? daConduit.Text_ON : daConduit.Text_OFF;
+                    daConduit.LiquidColor = button_State == Button_state.ON ? daConduit.Backdrop_ON : daConduit.Backdrop_OFF;
+                    daConduit.LiquidDirection = button_State == Button_state.ON ? HZH_Controls.Controls.LiquidDirection.Forward : HZH_Controls.Controls.LiquidDirection.Backward;
+                    break;
+                case "DARotor":
+                    DARotor daRotor = button as DARotor;
+                    daRotor.Text = button_State == Button_state.ON ? daRotor.Text_ON : daRotor.Text_OFF;
+                    daRotor.RotorAround = button_State == Button_state.ON ? HZH_Controls.Controls.RotorAround.Clockwise : HZH_Controls.Controls.RotorAround.Counterclockwise;
+                    break;
+                case "DALedBulb":
+                    DALedBulb daLedBulb = button as DALedBulb;
+                    daLedBulb.Text = button_State == Button_state.ON ? daLedBulb.Text_ON : daLedBulb.Text_OFF;
+                    daLedBulb.Color = button_State == Button_state.ON ? daLedBulb.Backdrop_ON : daLedBulb.Backdrop_OFF;
+                    break;
             }
         }
         /// <summary>

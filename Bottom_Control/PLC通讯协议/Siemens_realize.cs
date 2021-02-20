@@ -191,6 +191,9 @@ namespace Bottom_Control.PLC通讯协议
                             // 读取uint变量
                             readResultRender(siemensTcpNet.ReadUIntFromPLC(Name.Trim() + id.Trim()), Name.Trim() + id.Trim(), ref result);
                             break;
+                        case numerical_format.String_32_Bit:
+                            readResultRender(siemensTcpNet.ReadStringFromPLC(Name.Trim() + id.Trim(), 10), Name.Trim() + id.Trim(), ref result);
+                            break;
                     }
                    mutex.ReleaseMutex();
                 }
@@ -244,6 +247,9 @@ namespace Bottom_Control.PLC通讯协议
                             break;
                         case numerical_format.Unsigned_32_Bit:
                             writeResultRender(siemensTcpNet.WriteIntoPLC(Name.Trim() + id.Trim(), int.Parse(content)), Name.Trim() + id.Trim());
+                            break;
+                        case numerical_format.String_32_Bit:
+                            writeResultRender(siemensTcpNet.WriteAsciiStringIntoPLC(Name.Trim() + id.Trim(), content), Name.Trim() + id.Trim());
                             break;
                     }
                     mutex.ReleaseMutex();

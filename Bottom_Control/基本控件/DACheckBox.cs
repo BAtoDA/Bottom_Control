@@ -17,10 +17,16 @@ namespace Bottom_Control.基本控件
     //  时间：2021/2/18 18:23:41 
     //  文件名：DACheckBox 
     //  版本：V1.0.1  
-    //  说明： 实现控件上下左右对齐
+    //  说明： 实现上位机底层控件 单选类 -不再公共运行时
     //  修改者：***
     //  修改说明： 
     //==============================================================
+    /// <summary>
+    /// 实现上位机底层控件 单选类 -不再公共运行时
+    /// </summary>
+    [ToolboxItem(true)]
+    [Browsable(true)]
+    [Description("实现上位机底层控件 单选类 -不再公共运行时")]
     class DACheckBox: UCCheckBox, Button_base
     {
         #region 实现接口参数
@@ -140,6 +146,7 @@ namespace Bottom_Control.基本控件
         {
             base.Dispose(disposing);
             plc.Dispose();
+            this.PLC_time.Dispose();
         }
         /// <summary>
         /// 定时器到达事件

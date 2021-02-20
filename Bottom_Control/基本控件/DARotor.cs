@@ -5,7 +5,6 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 using Bottom_Control.PLC参数设置界面;
 using Bottom_Control.按钮__TO__PLC方法;
 using HZH_Controls.Controls;
@@ -14,20 +13,20 @@ namespace Bottom_Control.基本控件
 {
     //==============================================================
     //  作者：BAtoDA
-    //  时间：2021/2/18 20:42:22 
-    //  文件名：DASwitch 
+    //  时间：2021/2/20 11:26:33 
+    //  文件名：DARotor 
     //  版本：V1.0.1  
-    //  说明： 实现上位机底层控件 切换开关类 -不再公共运行时
+    //  说明： 实现上位机底层控件 风扇类 -不再公共运行时
     //  修改者：***
     //  修改说明： 
     //==============================================================
     /// <summary>
-    /// 实现上位机底层控件 切换开关类 -不再公共运行时 
+    /// 实现上位机底层控件 风扇类 -不再公共运行时
     /// </summary>
     [ToolboxItem(true)]
     [Browsable(true)]
-    [Description("实现上位机底层控件 切换开关类 -不再公共运行时")]
-    class DASwitch: UCSwitch, Button_base
+    [Description("实现上位机底层控件 风扇类 -不再公共运行时")]
+    class DARotor: UCRotor, Button_base
     {
         #region 实现接口参数
         public event EventHandler Modification;
@@ -119,29 +118,11 @@ namespace Bottom_Control.基本控件
         /// </summary>
         Button_PLC plc;
         #endregion
-        public DASwitch()
+        public DARotor()
         {
             plc = new Button_PLC();
             PLC_time.Start();
             PLC_time.Tick += new EventHandler(Time_tick);
-        }
-
-        protected override void OnMouseDown(MouseEventArgs e)//重写点击事件
-        {
-            if (!plc_Enable || Button_select) return;//用户不开启PLC功能
-            this.BeginInvoke((EventHandler)delegate
-            {
-                plc.plc(this);
-            });
-        }
-        protected override void OnMouseUp(MouseEventArgs e)//重写松开事件
-        {
-            if (!plc_Enable || Button_select) return;//用户不开启PLC功能
-            this.BeginInvoke((MethodInvoker)delegate
-            {
-                if (plc.state)
-                    plc.plc(this, plc.state);
-            });
         }
         protected override void Dispose(bool disposing)//释放托管资源
         {
@@ -157,10 +138,7 @@ namespace Bottom_Control.基本控件
         private void Time_tick(object send, EventArgs e)
         {
             if (!plc_Enable) return;//用户不开启PLC功能
-            lock (this)
-            {
-                plc.Refresh(this, this.Plc);
-            }
+            plc.Refresh(this, this.Plc);
         }
     }
 }

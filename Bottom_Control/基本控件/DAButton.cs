@@ -150,6 +150,7 @@ namespace Bottom_Control
         {
             base.Dispose(disposing);
             plc.Dispose();
+            this.PLC_time.Dispose();
         }
         /// <summary>
         /// 定时器到达事件

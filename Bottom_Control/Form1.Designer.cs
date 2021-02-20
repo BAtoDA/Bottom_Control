@@ -32,6 +32,11 @@ namespace Bottom_Control
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.plC_Open_Time1 = new Bottom_Control.设置控件.PLC_Open_Time();
             this.daCombox1 = new Bottom_Control.基本控件.DACombox();
+            this.ucWaveChart1 = new HZH_Controls.Controls.UCWaveChart();
+            this.ucValve1 = new HZH_Controls.Controls.UCValve();
+            this.ucSignalLamp1 = new HZH_Controls.Controls.UCSignalLamp();
+            this.ucAlarmLamp1 = new HZH_Controls.Controls.UCAlarmLamp();
+            this.ucConveyor1 = new HZH_Controls.Controls.UCConveyor();
             this.SuspendLayout();
             // 
             // plC_Open_Time1
@@ -64,7 +69,7 @@ namespace Bottom_Control
         0,
         0,
         0};
-            this.daCombox1.Location = new System.Drawing.Point(272, 153);
+            this.daCombox1.Location = new System.Drawing.Point(136, 73);
             this.daCombox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.daCombox1.Name = "daCombox1";
             this.daCombox1.PLC_Address = "0";
@@ -91,11 +96,88 @@ namespace Bottom_Control
         null,
         null};
             // 
+            // ucWaveChart1
+            // 
+            this.ucWaveChart1.ConerRadius = 10;
+            this.ucWaveChart1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(59)))));
+            this.ucWaveChart1.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.ucWaveChart1.GridLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(59)))));
+            this.ucWaveChart1.GridLineTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(59)))));
+            this.ucWaveChart1.IsRadius = true;
+            this.ucWaveChart1.IsShowRect = true;
+            this.ucWaveChart1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(59)))));
+            this.ucWaveChart1.LineTension = 0.5F;
+            this.ucWaveChart1.Location = new System.Drawing.Point(752, 14);
+            this.ucWaveChart1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ucWaveChart1.Name = "ucWaveChart1";
+            this.ucWaveChart1.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.ucWaveChart1.RectWidth = 1;
+            this.ucWaveChart1.Size = new System.Drawing.Size(300, 200);
+            this.ucWaveChart1.SleepTime = 1000;
+            this.ucWaveChart1.TabIndex = 1;
+            this.ucWaveChart1.WaveWidth = 50;
+            // 
+            // ucValve1
+            // 
+            this.ucValve1.AsisBottomColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(169)))), ((int)(((byte)(243)))));
+            this.ucValve1.AxisColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(169)))), ((int)(((byte)(243)))));
+            this.ucValve1.LiquidColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(169)))), ((int)(((byte)(243)))));
+            this.ucValve1.LiquidDirection = HZH_Controls.Controls.LiquidDirection.Forward;
+            this.ucValve1.LiquidSpeed = 100;
+            this.ucValve1.Location = new System.Drawing.Point(237, 401);
+            this.ucValve1.Name = "ucValve1";
+            this.ucValve1.Opened = true;
+            this.ucValve1.Size = new System.Drawing.Size(120, 100);
+            this.ucValve1.SwitchColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(30)))), ((int)(((byte)(99)))));
+            this.ucValve1.TabIndex = 5;
+            this.ucValve1.ValveColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(59)))));
+            this.ucValve1.ValveStyle = HZH_Controls.Controls.ValveStyle.Horizontal_Top;
+            // 
+            // ucSignalLamp1
+            // 
+            this.ucSignalLamp1.IsHighlight = true;
+            this.ucSignalLamp1.IsShowBorder = false;
+            this.ucSignalLamp1.LampColor = new System.Drawing.Color[] {
+        System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(59)))))};
+            this.ucSignalLamp1.Location = new System.Drawing.Point(696, 290);
+            this.ucSignalLamp1.Name = "ucSignalLamp1";
+            this.ucSignalLamp1.Size = new System.Drawing.Size(50, 50);
+            this.ucSignalLamp1.TabIndex = 8;
+            this.ucSignalLamp1.TwinkleSpeed = 0;
+            // 
+            // ucAlarmLamp1
+            // 
+            this.ucAlarmLamp1.LampColor = new System.Drawing.Color[] {
+        System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(59)))))};
+            this.ucAlarmLamp1.Lampstand = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
+            this.ucAlarmLamp1.Location = new System.Drawing.Point(696, 401);
+            this.ucAlarmLamp1.Name = "ucAlarmLamp1";
+            this.ucAlarmLamp1.Size = new System.Drawing.Size(50, 50);
+            this.ucAlarmLamp1.TabIndex = 9;
+            this.ucAlarmLamp1.TwinkleSpeed = 0;
+            // 
+            // ucConveyor1
+            // 
+            this.ucConveyor1.ConveyorColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(59)))));
+            this.ucConveyor1.ConveyorDirection = HZH_Controls.Controls.ConveyorDirection.Forward;
+            this.ucConveyor1.ConveyorHeight = 50;
+            this.ucConveyor1.ConveyorSpeed = 100;
+            this.ucConveyor1.Inclination = 0D;
+            this.ucConveyor1.Location = new System.Drawing.Point(237, 507);
+            this.ucConveyor1.Name = "ucConveyor1";
+            this.ucConveyor1.Size = new System.Drawing.Size(300, 50);
+            this.ucConveyor1.TabIndex = 10;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1065, 563);
+            this.Controls.Add(this.ucConveyor1);
+            this.Controls.Add(this.ucAlarmLamp1);
+            this.Controls.Add(this.ucSignalLamp1);
+            this.Controls.Add(this.ucValve1);
+            this.Controls.Add(this.ucWaveChart1);
             this.Controls.Add(this.daCombox1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -108,5 +190,10 @@ namespace Bottom_Control
 
         private 设置控件.PLC_Open_Time plC_Open_Time1;
         private 基本控件.DACombox daCombox1;
+        private HZH_Controls.Controls.UCWaveChart ucWaveChart1;
+        private HZH_Controls.Controls.UCValve ucValve1;
+        private HZH_Controls.Controls.UCSignalLamp ucSignalLamp1;
+        private HZH_Controls.Controls.UCAlarmLamp ucAlarmLamp1;
+        private HZH_Controls.Controls.UCConveyor ucConveyor1;
     }
 }

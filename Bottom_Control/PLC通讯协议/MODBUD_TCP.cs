@@ -211,6 +211,9 @@ namespace Bottom_Control.PLC通讯协议
                             // 读取uint变量
                             readResultRender(busTcpClient.ReadUIntRegister(ushort.Parse(id)), id, ref result);
                             break;
+                        case numerical_format.String_32_Bit:
+                            readResultRender(busTcpClient.ReadStringRegister(ushort.Parse(id), 10), id, ref result);
+                            break;
                     }
                     mutex.ReleaseMutex();
                 }
@@ -264,6 +267,9 @@ namespace Bottom_Control.PLC通讯协议
                             break;
                         case numerical_format.Unsigned_32_Bit:
                             writeResultRender(busTcpClient.WriteRegister(ushort.Parse(id), uint.Parse(content)), id);
+                            break;
+                        case numerical_format.String_32_Bit:
+                            writeResultRender(busTcpClient.WriteRegister(ushort.Parse(id), content), Name.Trim() + id.Trim());
                             break;
                     }
                     mutex.ReleaseMutex();
