@@ -18,6 +18,6 @@
  2:分别继承类基Button_base TextBox_base实现了就可以设置相应的参数  
  3:控件操作PLC--Bit位 通过实例化Button_PLC类 调用plc(this)方法 方可 反之字操作类型实例化TextBox_PLC类型  
  4:每个控件都自带 System.Windows.Forms.Timer类型的定时器作为刷新UI  
- 
+   
  
  
