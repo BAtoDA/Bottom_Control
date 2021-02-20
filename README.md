@@ -1,6 +1,7 @@
 # Bottom_Control 
                                                            关于说明  
-无代码访问PLC的控件 通过Visual Studio 拖拽控件设置相应的参数就可以访问PLC简单易用 适用于工业开发作为底层减少项目代码量提高稳定性 目前支持6款控件 正在全力开发  
+1: 无代码访问PLC的控件 通过Visual Studio 拖拽控件设置相应的参数就可以访问PLC简单易用 适用于工业开发作为底层减少项目代码量提高稳定性 目前支持6款控件 正在全力开发  
+2:视频展示链接：https://pan.baidu.com/s/12TFRdkp64Kqo6_oK1gdbNw 提取码: lo33  
 
                                                            使用步骤 
 1：先拖拽plC_Open_Time1控件   
@@ -13,4 +14,12 @@
                                                            注意  
  1：plC_Open_Time1控件只能使用一次  否则报错    
  2: 清理解决方案会导致plC_Open_Time1控件出现错误（删除重写添加即可）  
+ 
+                                                   关于用户自定义控件   
+ 1:控件类型分为Bit位线圈操作类型与字双字操作类型   
+ 2:分别继承类基Button_base TextBox_base实现了就可以设置相应的参数  
+ 3:控件操作PLC--Bit位 通过实例化Button_PLC类 调用plc(this)方法 方可 反之字操作类型实例化TextBox_PLC类型  
+ 4:每个控件都自带 System.Windows.Forms.Timer类型的定时器作为刷新UI  
+   
+ 
  
