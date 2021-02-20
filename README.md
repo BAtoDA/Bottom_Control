@@ -12,5 +12,12 @@
 
                                                            注意  
  1：plC_Open_Time1控件只能使用一次  否则报错    
- 2: 清理解决方案会导致plC_Open_Time1控件出现错误（删除重写添加即可）  
+ 2: 清理解决方案会导致plC_Open_Time1控件出现错误（删除重写添加即可）   
+                                                   关于用户自定义控件   
+ 1:控件类型分为Bit位线圈操作类型与字双字操作类型   
+ 2:分别继承类基Button_base TextBox_base实现了就可以设置相应的参数  
+ 3:控件操作PLC--Bit位 通过实例化Button_PLC类 调用plc(this)方法 方可 反之字操作类型实例化TextBox_PLC类型  
+ 4:每个控件都自带 System.Windows.Forms.Timer类型的定时器作为刷新UI  
+ 
+ 
  
