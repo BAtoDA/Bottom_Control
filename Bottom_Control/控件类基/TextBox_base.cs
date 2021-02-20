@@ -63,5 +63,9 @@ namespace Bottom_Control.控件类基
         /// 传递控件文本值
         /// </summary>
         string Control_Text { get; set; }
+        /// <summary>
+        /// 控件刷新定时器
+        /// </summary>
+        System.Windows.Forms.Timer PLC_time { get; }
     }
 }

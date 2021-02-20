@@ -262,6 +262,48 @@ namespace Bottom_Control.按钮__TO__PLC方法
                     daLedBulb.Text = button_State == Button_state.ON ? daLedBulb.Text_ON : daLedBulb.Text_OFF;
                     daLedBulb.Color = button_State == Button_state.ON ? daLedBulb.Backdrop_ON : daLedBulb.Backdrop_OFF;
                     break;
+                case "DASignalLamp":
+                    DASignalLamp daSignalLamp = button as DASignalLamp;
+                    daSignalLamp.Text = button_State == Button_state.ON ? daSignalLamp.Text_ON : daSignalLamp.Text_OFF;
+                    if(daSignalLamp.O_Flicker&button_State==Button_state.Off)
+                    {
+                        daSignalLamp.LampColor = daSignalLamp.O_FlickerColor;
+                        daSignalLamp.TwinkleSpeed = daSignalLamp.O_FlickerTime;
+                        return;
+                    }
+                    if (daSignalLamp.I_Flicker & button_State == Button_state.ON)
+                    {
+                        daSignalLamp.LampColor = daSignalLamp.I_FlickerColor;
+                        daSignalLamp.TwinkleSpeed = daSignalLamp.I_FlickerTime;
+                        return;
+                    }
+                    if (daSignalLamp.O_Flicker == false & daSignalLamp.I_Flicker == false)
+                    {
+                        daSignalLamp.LampColor[0] = button_State == Button_state.ON ? daSignalLamp.Backdrop_ON : daSignalLamp.Backdrop_OFF;
+                        daSignalLamp.TwinkleSpeed = 0;
+                    }
+                    break;
+                case "DAAlarmLamp":
+                    DAAlarmLamp daAlarmLamp = button as DAAlarmLamp;
+                    daAlarmLamp.Text = button_State == Button_state.ON ? daAlarmLamp.Text_ON : daAlarmLamp.Text_OFF;
+                    if (daAlarmLamp.O_Flicker & button_State == Button_state.Off)
+                    {
+                        daAlarmLamp.LampColor = daAlarmLamp.O_FlickerColor;
+                        daAlarmLamp.TwinkleSpeed = daAlarmLamp.O_FlickerTime;
+                        return;
+                    }
+                    if (daAlarmLamp.I_Flicker & button_State == Button_state.ON)
+                    {
+                        daAlarmLamp.LampColor = daAlarmLamp.I_FlickerColor;
+                        daAlarmLamp.TwinkleSpeed = daAlarmLamp.I_FlickerTime;
+                        return;
+                    }
+                    if (daAlarmLamp.O_Flicker == false & daAlarmLamp.I_Flicker == false)
+                    {
+                        daAlarmLamp.LampColor[0] = button_State == Button_state.ON ? daAlarmLamp.Backdrop_ON : daAlarmLamp.Backdrop_OFF;
+                        daAlarmLamp.TwinkleSpeed = 0;
+                    }
+                    break;
             }
         }
         /// <summary>

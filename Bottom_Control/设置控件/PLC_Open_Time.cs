@@ -123,7 +123,7 @@ namespace Bottom_Control.设置控件
             if (Lock_control)
             {
                 lock_err = true;
-                throw new Exception("该控件不能重复添加");
+                //throw new Exception("该控件不能重复添加");
             }
             Lock_control = true;
             //配置该控件默认参数

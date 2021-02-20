@@ -77,5 +77,9 @@ namespace Bottom_Control
         /// 按钮操作模式
         /// </summary>
         Button_pattern Pattern { get; set; }
+        /// <summary>
+        /// 控件刷新定时器
+        /// </summary>
+        System.Windows.Forms.Timer PLC_time { get; }
     }
 }

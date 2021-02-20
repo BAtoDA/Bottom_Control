@@ -100,6 +100,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Public_Class.cs" />
+    <Compile Include="基本控件\DAAlarmLamp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="基本控件\DAAnalogMeter.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -117,6 +120,12 @@
     </Compile>
     <Compile Include="基本控件\DAConduit.cs">
       <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="基本控件\DAConveyor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="基本控件\DADataGridView_TO_PLC.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="基本控件\DALedBulb.cs">
       <SubType>Component</SubType>
@@ -136,9 +145,13 @@
     <Compile Include="基本控件\DARotor.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="基本控件\DASignalLamp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="基本控件\DASwitch.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="控件类基\DataGridViewPLC_base.cs" />
     <Compile Include="基本控件\DATextBox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -148,6 +161,7 @@
     <Compile Include="按钮--TO--PLC方法\Button_PLC.cs" />
     <Compile Include="控件类基\Button_base.cs" />
     <Compile Include="控件类基\Combox_base.cs" />
+    <Compile Include="控件类基\Flicker_base.cs" />
     <Compile Include="控件类基\TextBox_base.cs" />
     <Compile Include="文本--TO--PLC方法\TextBox_PLC.cs" />
     <Compile Include="文本输入键盘\keyboard.cs">
@@ -162,6 +176,7 @@
     <Compile Include="文本输入键盘\keyboard_Hex.Designer.cs">
       <DependentUpon>keyboard_Hex.cs</DependentUpon>
     </Compile>
+    <Compile Include="表格控件--TO--PLC\DataGridView_PLC.cs" />
     <Compile Include="设置控件\PLC_Open_Time.cs">
       <SubType>Component</SubType>
     </Compile>
