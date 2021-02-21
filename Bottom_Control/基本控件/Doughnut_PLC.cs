@@ -6,21 +6,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 using Bottom_Control.PLC参数设置界面;
+using Bottom_Control.圆型图__TO__PLC;
 using Bottom_Control.按钮__TO__PLC方法;
 using Bottom_Control.控件类基;
 using Bottom_Control.文本__TO__PLC方法;
 using Bottom_Control.表格控件__TO__PLC;
-using CCWin.SkinControl;
 
 namespace Bottom_Control.基本控件
 {
     //==============================================================
     //  作者：BAtoDA
-    //  时间：2021/2/20 16:44:59 
-    //  文件名：DADataGridView_TO_PLC 
+    //  时间：2021/2/21 9:33:48 
+    //  文件名：Doughnut_PLC 
     //  版本：V1.0.1  
-    //  说明： 实现上位机底层控件 定时从PLC自定寄存器读取数据  PLC读取表格类 -不再公共运行时
+    //  说明： 实现从PLC出读取自定寄存器进行圆形图显示
     //  修改者：***
     //  修改说明： 
     //==============================================================
@@ -30,7 +31,7 @@ namespace Bottom_Control.基本控件
     [ToolboxItem(true)]
     [Browsable(true)]
     [Description("实现上位机底层控件 定时从PLC自定寄存器读取数据  PLC读取表格类 -不再公共运行时")]
-    class DADataGridView_TO_PLC: SkinDataGridView, TextBox_base, DataGridViewPLC_base
+    class Doughnut_PLC : Chart, TextBox_base, DataGridViewPLC_base, Doughnut_Base
     {
         #region 实现接口参数
         public event EventHandler Modification;
@@ -90,7 +91,6 @@ namespace Bottom_Control.基本控件
         }
         private string plc_Address = "0";
         [Description("设置访问PLC的类型 包含显示数据的类型"), Category("PLC-控件参数")]
-        [DefaultValue(typeof(numerical_format), "Signed_16_Bit")]
         public numerical_format numerical { get; set; } = numerical_format.Signed_16_Bit;
         [DefaultValue(typeof(int), "8")]
         public int Decimal_Above { get; set; } = 8;
@@ -109,58 +109,47 @@ namespace Bottom_Control.基本控件
         public string[] DataGridView_Name { get; set; } = new string[10];
         [Description("表格列读取PLC的类型--对应表格列"), Category("PLC-控件参数")]
         public numerical_format[] DataGridView_numerical { get; set; } = new numerical_format[10];
-        [Description("指示着是否显示读取时间列"), Category("PLC-控件参数")]
-        public bool DataGridViewPLC_Time { get; set; }
+        public bool DataGridViewPLC_Time { get; set; } = false;
+        [Description("默认Chart图标名称"), Category("PLC-控件参数")]
+        public string doughnut_Chart_Name { get; set; } = "Chart1";
+        [Description("默认图标显示的名称"), Category("PLC-控件参数")]
+        public string doughnut_Chart_Text { get; set; } = "Chart_Text";
+        [Description("默认显示的文本字体"), Category("PLC-控件参数")]
+        public Font doughnut_Chart_Font { get; set; } = new Font("宋体", 9);
+        [Description("设置字体颜色"), Category("PLC-控件参数")]
+        public Color color { get; set; }
+        [Description("设置默认颜色为透明"), Category("PLC-控件参数")]
+        public Color background_colo { get; set; }
 
         /// <summary>
         /// PLC通讯对象
         /// </summary>
         DataGridView_PLC pLC;
         #endregion
-        public DADataGridView_TO_PLC()
+
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        public Doughnut_PLC()
         {
             pLC = new DataGridView_PLC();
             PLC_time.Start();
             PLC_time.Tick += new EventHandler(Time_tick);
-
-        }
-        protected override void InitLayout()//加载状态栏
-        {
-            base.InitLayout();
-            //添加控件参数
-            this.Columns.Clear();
-            for (int i = 0; i < 10; i++)
-            {
-                if (this.DataGridView_Name[i] == null)
-                {
-                    if (this.DataGridViewPLC_Time)
-                    {
-                        DataGridViewTextBoxColumn TextBoxTime = new DataGridViewTextBoxColumn();
-                        TextBoxTime.HeaderText = "读取PLC时间";
-                        TextBoxTime.ToolTipText = "读取PLC时间";
-                        TextBoxTime.Width = 120;
-                        this.Columns.Add(TextBoxTime);
-                    }
-                    break;
-                }
-                DataGridViewTextBoxColumn TextBoxColumn = new DataGridViewTextBoxColumn();
-                TextBoxColumn.HeaderText = this.DataGridView_Name[i];
-                TextBoxColumn.ToolTipText = this.DataGridView_Name[i];
-                TextBoxColumn.Width = this.CreateGraphics().MeasureString(this.DataGridView_Name[i], this.Font).Width > TextBoxColumn.Width ? Convert.ToInt32(this.CreateGraphics().MeasureString(this.DataGridView_Name[i], this.Font).Width + 20) : TextBoxColumn.Width;
-                this.Columns.Add(TextBoxColumn);
-            }
-            //自动改变控件大小
-            int Siz = 0;
-            for(int i=0;i<this.ColumnCount;i++)
-            {
-                Siz += this.Columns[i].Width;
-            }
-            this.Size = new Size(Siz + 60,this.Size.Height);
+           
         }
         protected override void Dispose(bool disposing)//释放托管资源
         {
             base.Dispose(disposing);
             this.PLC_time.Dispose();
+        }
+        /// <summary>
+        /// 重写事件UI控件绘制事
+        /// </summary>
+        /// <param name="levent"></param>
+        protected override void OnLayout(LayoutEventArgs levent)
+        {
+            base.OnLayout(levent);
+            //doughnut_Chart_Load();
         }
         /// <summary>
         /// 定时器到达事件
@@ -170,24 +159,62 @@ namespace Bottom_Control.基本控件
         private void Time_tick(object send, EventArgs e)
         {
             if (!plc_Enable) return;//用户不开启PLC功能
-            lock (this)
+            lock(this)
             {
-                this.BeginInvoke((EventHandler)delegate
+                int indx = 0;
+                for(int i=0;i < this.DataGridView_Name.Length;i++)
                 {
-                    List<string> Data = pLC.plc(this, this, this.DataGridViewPLC_Time ? this.Columns.Count - 1 : this.Columns.Count);
-                    if (Data.Count == (this.DataGridViewPLC_Time ? this.Columns.Count - 1 : this.Columns.Count))
-                    {
-                        int index = this.Rows.Add();
-                        for (int i = 0; i < Data.Count; i++)
-                        {
-                            this.Rows[index].Cells[i].Value = Data[i];
-                        }
-                        if (this.DataGridViewPLC_Time)
-                            this.Rows[index].Cells[this.Rows[index].Cells.Count - 1].Value = DateTime.Now.ToString();
-                    }
-                    this.FirstDisplayedScrollingRowIndex = this.Rows.Count - 1;
-                });
+                    if (this.DataGridView_Name[i] == null)
+                        break;
+                    indx += 1;
+                }
+                List<string> Data = pLC.plc(this, this,indx);
+                if (Data.Count != indx||Data.Count==0)
+                    return;
+                doughnut_Chart_Load(Data);
             }
         }
+        /// <summary>
+        /// 初次加载UI加载方法
+        /// </summary>
+        public void doughnut_Chart_Load(List<string> doughnut_Chart_Data_INT)
+        {
+            //清空chart图表
+            this.ChartAreas.Clear(); //图表区
+            this.Titles.Clear(); //图表标题
+            this.Series.Clear(); //图表序列
+            this.Legends.Clear(); //图表图例
+
+            //新建chart图表要素
+            this.ChartAreas.Add(new ChartArea(doughnut_Chart_Name));
+            this.ChartAreas[doughnut_Chart_Name].AxisX.IsMarginVisible = false;
+            this.ChartAreas[doughnut_Chart_Name].Area3DStyle.Enable3D = false;
+            this.Titles.Add(doughnut_Chart_Text);
+            this.Titles[0].Font = doughnut_Chart_Font;
+            this.Titles[0].ForeColor = color;
+            this.Series.Add("data");
+            this.Series["data"].ChartType = SeriesChartType.Doughnut; //这一行与上个不同
+            this.Series["data"]["PieLabelStyle"] = "Outside";
+            this.Series["data"]["PieLineColor"] = "Black";
+            this.Legends.Add(new Legend("legend"));
+            this.Palette = ChartColorPalette.BrightPastel;
+            //控件背景--透明
+            this.BackColor = background_colo;
+            this.ChartAreas[doughnut_Chart_Name].BackColor = Color.Transparent;
+            this.Titles[0].BackColor = Color.Transparent;
+            //为chart图表赋值
+            //点1
+            for (int i = 0; i < 10; i++)
+            {
+                if (this.DataGridView_Name[i] == null || i > doughnut_Chart_Data_INT.Count)
+                    break;
+                int idxA = this.Series["data"].Points.AddY(Convert.ToInt32(doughnut_Chart_Data_INT[i]));
+                DataPoint pointA = this.Series["data"].Points[idxA];
+                pointA.Label = this.DataGridView_Name[i];
+                pointA.LegendText = "#LABEL(#VAL) #PERCENT{P2}";
+                pointA.LabelForeColor = color;//字体颜色
+            }
+        }
+        
     }
 }

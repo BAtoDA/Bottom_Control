@@ -22,5 +22,10 @@ namespace Bottom_Control
             this.plC_Open_Time1.Enabled = true;
             this.plC_Open_Time1.Start();
         }
+
+        private void daDataGridView_TO_PLC1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

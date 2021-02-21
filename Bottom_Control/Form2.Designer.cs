@@ -1,7 +1,8 @@
 ﻿
 namespace Bottom_Control
 {
-    partial class Form2
+    partial class 
+        Form2
     {
         /// <summary>
         /// Required designer variable.
@@ -33,6 +34,9 @@ namespace Bottom_Control
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.daAlarmLamp1 = new Bottom_Control.基本控件.DAAlarmLamp();
             this.daSignalLamp1 = new Bottom_Control.基本控件.DASignalLamp();
             this.daLedBulb1 = new Bottom_Control.基本控件.DALedBulb();
@@ -44,7 +48,15 @@ namespace Bottom_Control
             this.daPond1 = new Bottom_Control.基本控件.DAPond();
             this.plC_Open_Time1 = new Bottom_Control.设置控件.PLC_Open_Time();
             this.daDataGridView_TO_PLC1 = new Bottom_Control.基本控件.DADataGridView_TO_PLC();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.doughnut_PLC1 = new Bottom_Control.基本控件.Doughnut_PLC();
             ((System.ComponentModel.ISupportInitialize)(this.daDataGridView_TO_PLC1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doughnut_PLC1)).BeginInit();
             this.SuspendLayout();
             // 
             // daAlarmLamp1
@@ -60,7 +72,7 @@ namespace Bottom_Control
             this.daAlarmLamp1.LampColor = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(59)))))};
             this.daAlarmLamp1.Lampstand = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
-            this.daAlarmLamp1.Location = new System.Drawing.Point(485, 277);
+            this.daAlarmLamp1.Location = new System.Drawing.Point(112, 160);
             this.daAlarmLamp1.Name = "daAlarmLamp1";
             this.daAlarmLamp1.O_FlickerColor = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(59)))))};
@@ -312,7 +324,7 @@ namespace Bottom_Control
             this.daDataGridView_TO_PLC1.GridColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.daDataGridView_TO_PLC1.HeadFont = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.daDataGridView_TO_PLC1.HeadSelectForeColor = System.Drawing.SystemColors.HighlightText;
-            this.daDataGridView_TO_PLC1.Location = new System.Drawing.Point(467, 94);
+            this.daDataGridView_TO_PLC1.Location = new System.Drawing.Point(379, 12);
             this.daDataGridView_TO_PLC1.Name = "daDataGridView_TO_PLC1";
             this.daDataGridView_TO_PLC1.PLC_address = new double[] {
         0D,
@@ -336,17 +348,117 @@ namespace Bottom_Control
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             this.daDataGridView_TO_PLC1.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.daDataGridView_TO_PLC1.RowTemplate.Height = 23;
-            this.daDataGridView_TO_PLC1.Size = new System.Drawing.Size(240, 150);
+            this.daDataGridView_TO_PLC1.Size = new System.Drawing.Size(380, 150);
             this.daDataGridView_TO_PLC1.TabIndex = 10;
             this.daDataGridView_TO_PLC1.TitleBack = null;
             this.daDataGridView_TO_PLC1.TitleBackColorBegin = System.Drawing.Color.White;
             this.daDataGridView_TO_PLC1.TitleBackColorEnd = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(196)))), ((int)(((byte)(242)))));
+            this.daDataGridView_TO_PLC1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.daDataGridView_TO_PLC1_CellContentClick);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "PLC1";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ToolTipText = "PLC1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "PLC2";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ToolTipText = "PLC2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "读取PLC时间";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ToolTipText = "读取PLC时间";
+            this.dataGridViewTextBoxColumn3.Width = 120;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "PLC1";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ToolTipText = "PLC1";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.HeaderText = "PLC2";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ToolTipText = "PLC2";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.HeaderText = "读取PLC时间";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ToolTipText = "读取PLC时间";
+            this.dataGridViewTextBoxColumn6.Width = 120;
+            // 
+            // doughnut_PLC1
+            // 
+            this.doughnut_PLC1.background_colo = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            chartArea1.Name = "ChartArea1";
+            this.doughnut_PLC1.ChartAreas.Add(chartArea1);
+            this.doughnut_PLC1.color = System.Drawing.Color.Yellow;
+            this.doughnut_PLC1.Control_Text = "doughnut_PLC1";
+            this.doughnut_PLC1.DataGridView_Name = new string[] {
+        "PLC2",
+        "PLC3",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null};
+            this.doughnut_PLC1.DataGridView_numerical = new Bottom_Control.numerical_format[] {
+        Bottom_Control.numerical_format.Signed_16_Bit,
+        Bottom_Control.numerical_format.Signed_16_Bit,
+        Bottom_Control.numerical_format.BCD_16_Bit,
+        Bottom_Control.numerical_format.BCD_16_Bit,
+        Bottom_Control.numerical_format.BCD_16_Bit,
+        Bottom_Control.numerical_format.BCD_16_Bit,
+        Bottom_Control.numerical_format.BCD_16_Bit,
+        Bottom_Control.numerical_format.BCD_16_Bit,
+        Bottom_Control.numerical_format.BCD_16_Bit,
+        Bottom_Control.numerical_format.BCD_16_Bit};
+            this.doughnut_PLC1.DataGridViewPLC_Time = false;
+            this.doughnut_PLC1.doughnut_Chart_Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.doughnut_PLC1.doughnut_Chart_Name = "Chart1";
+            this.doughnut_PLC1.doughnut_Chart_Text = "Chart_Text";
+            legend1.Name = "Legend1";
+            this.doughnut_PLC1.Legends.Add(legend1);
+            this.doughnut_PLC1.Location = new System.Drawing.Point(392, 215);
+            this.doughnut_PLC1.Name = "doughnut_PLC1";
+            this.doughnut_PLC1.numerical = Bottom_Control.numerical_format.Signed_16_Bit;
+            this.doughnut_PLC1.PLC_address = new double[] {
+        0D,
+        1D,
+        0D,
+        0D,
+        0D,
+        0D,
+        0D,
+        0D,
+        0D,
+        0D};
+            this.doughnut_PLC1.PLC_Address = "0";
+            this.doughnut_PLC1.PLC_Contact = "D";
+            this.doughnut_PLC1.PLC_Enable = true;
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.doughnut_PLC1.Series.Add(series1);
+            this.doughnut_PLC1.Size = new System.Drawing.Size(300, 300);
+            this.doughnut_PLC1.TabIndex = 11;
+            this.doughnut_PLC1.Text = "doughnut_PLC1";
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 496);
+            this.Controls.Add(this.doughnut_PLC1);
             this.Controls.Add(this.daDataGridView_TO_PLC1);
             this.Controls.Add(this.daAlarmLamp1);
             this.Controls.Add(this.daSignalLamp1);
@@ -361,6 +473,7 @@ namespace Bottom_Control
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.daDataGridView_TO_PLC1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doughnut_PLC1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -378,5 +491,12 @@ namespace Bottom_Control
         private 基本控件.DASignalLamp daSignalLamp1;
         private 基本控件.DAAlarmLamp daAlarmLamp1;
         private 基本控件.DADataGridView_TO_PLC daDataGridView_TO_PLC1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private 基本控件.Doughnut_PLC doughnut_PLC1;
     }
 }
