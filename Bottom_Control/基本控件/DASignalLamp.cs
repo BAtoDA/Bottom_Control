@@ -93,20 +93,10 @@ namespace Bottom_Control.基本控件
         [Description("按钮参数 OFF时触发背景颜色"), Category("PLC-按钮参数")]
         [DefaultValue(typeof(Color), "Control")]
         public Color Backdrop_OFF { get; set; } = Color.FromArgb(74, 131, 229);
-        [Description("按钮按下状态"), Category("PLC-按钮参数")]
-        [DefaultValue(typeof(bool), "false")]
         public bool Command { get; set; }
-        [Description("按钮类型选择 true 位指示灯 false 位处理"), Category("PLC-按钮参数")]
-        [DefaultValue(typeof(bool), "false")]
         public bool Button_select { get; set; }
-        [Description("按钮操作模式"), Category("PLC-按钮参数")]
-        [DefaultValue(typeof(Button_pattern), "复归型")]
         public Button_pattern Pattern { get; set; } = Button_pattern.Regression;
-        [Description("控件为ON时显示的文本值"), Category("PLC-按钮参数")]
-        [DefaultValue(typeof(string), "ON")]
         public string Text_ON { get; set; } = "ON";
-        [Description("控件为OFF时显示的文本值"), Category("PLC-按钮参数")]
-        [DefaultValue(typeof(string), "OFF")]
         public string Text_OFF { get; set; } = "OFF";
         /// <summary>
         /// 定时刷新 定时器

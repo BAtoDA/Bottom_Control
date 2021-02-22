@@ -102,6 +102,15 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Public_Class.cs" />
+    <Compile Include="基本控件\DADataGridView_PLCSQL.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="基本控件\Histogram_PLC.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="基本控件\Oscillogram_PLC.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="控件类基\Doughnut_Base.cs" />
     <Compile Include="基本控件\DAAlarmLamp.cs">
       <SubType>UserControl</SubType>
@@ -168,6 +177,7 @@
     <Compile Include="控件类基\Button_base.cs" />
     <Compile Include="控件类基\Combox_base.cs" />
     <Compile Include="控件类基\Flicker_base.cs" />
+    <Compile Include="控件类基\Histogram_base.cs" />
     <Compile Include="控件类基\TextBox_base.cs" />
     <Compile Include="文本--TO--PLC方法\TextBox_PLC.cs" />
     <Compile Include="文本输入键盘\keyboard.cs">
@@ -183,6 +193,7 @@
       <DependentUpon>keyboard_Hex.cs</DependentUpon>
     </Compile>
     <Compile Include="表格控件--TO--PLC\DataGridView_PLC.cs" />
+    <Compile Include="表格控件--TO--PLC\表格控件--TO--SQL\DADataGridView_SQL.cs" />
     <Compile Include="设置控件\PLC_Open_Time.cs">
       <SubType>Component</SubType>
     </Compile>

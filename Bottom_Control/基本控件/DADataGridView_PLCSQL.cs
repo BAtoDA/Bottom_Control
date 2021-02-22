@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -11,26 +13,27 @@ using Bottom_Control.按钮__TO__PLC方法;
 using Bottom_Control.控件类基;
 using Bottom_Control.文本__TO__PLC方法;
 using Bottom_Control.表格控件__TO__PLC;
+using Bottom_Control.表格控件__TO__PLC.表格控件__TO__SQL;
 using CCWin.SkinControl;
 
 namespace Bottom_Control.基本控件
 {
     //==============================================================
     //  作者：BAtoDA
-    //  时间：2021/2/20 16:44:59 
-    //  文件名：DADataGridView_TO_PLC 
+    //  时间：2021/2/22 11:58:08 
+    //  文件名：DADataGridView_PLCSQL 
     //  版本：V1.0.1  
-    //  说明： 实现上位机底层控件 定时从PLC自定寄存器读取数据  PLC读取表格类 -不再公共运行时
+    //  说明： 实现上位机底层控件 定时从PLC自定寄存器读取数据 保存到SQL数据库  -不再公共运行时
     //  修改者：***
     //  修改说明： 
     //==============================================================
     /// <summary>
-    /// 实现上位机底层控件 文本类 -不再公共运行时
+    /// 实现上位机底层控件 定时从PLC自定寄存器读取数据 保存到SQL数据库  -不再公共运行时
     /// </summary>
     [ToolboxItem(true)]
     [Browsable(true)]
-    [Description("实现上位机底层控件 定时从PLC自定寄存器读取数据  PLC读取表格类 -不再公共运行时")]
-    class DADataGridView_TO_PLC: SkinDataGridView, TextBox_base, DataGridViewPLC_base
+    [Description("实现上位机底层控件 定时从PLC自定寄存器读取数据 保存到SQL数据库  -不再公共运行时")]
+    class DADataGridView_PLCSQL : SkinDataGridView, TextBox_base, DataGridViewPLC_base
     {
         #region 实现接口参数
         public event EventHandler Modification;
@@ -50,7 +53,7 @@ namespace Bottom_Control.基本控件
             }
         }
         private PLC pLC_valu;
-        [Description("是否启用PLC功能"), Category("PLC类型")]
+        [Description("是否启用PLC功能 启用前确认SQL字符串 表名是否正确 否则UI会卡死 报错"), Category("PLC类型")]
         public bool PLC_Enable
         {
             get => plc_Enable;
@@ -103,57 +106,69 @@ namespace Bottom_Control.基本控件
         public System.Windows.Forms.Timer PLC_time { get; } = new System.Windows.Forms.Timer() { Enabled = true, Interval = 500 };
         [Description("读取PLC的地址--对应表格列"), Category("PLC-控件参数")]
         public double[] PLC_address { get; set; } = new double[10];
-        [Description("表格列显示的名称--对应表格列"), Category("PLC-控件参数")]
         public string[] DataGridView_Name { get; set; } = new string[10];
         [Description("表格列读取PLC的类型--对应表格列"), Category("PLC-控件参数")]
         public numerical_format[] DataGridView_numerical { get; set; } = new numerical_format[10];
-        [Description("指示着是否显示读取时间列"), Category("PLC-控件参数")]
         public bool DataGridViewPLC_Time { get; set; }
-
+        [Description("SQL链接字符串--仅支持用户名 密码 登录不支持Win身份登录 字符串需要写明需要链接的数据库名 注意仅支持SQL Server"), Category("SQL-控件参数")]
+        /// <summary>
+        /// SQL链接字符串
+        /// </summary>
+        public string SqlString { get; set; } = @"data source=DESKTOP-955LB02\SQLEXPRESS;initial catalog=XN;persist security info=True;user id=sa;password=3131458;MultipleActiveResultSets=True;App=EntityFramework";
+        [Description("需要链接的SQL表名"), Category("SQL-控件参数")]
+        /// <summary>
+        /// 需要链接的SQL表名
+        /// </summary>
+        public string SqlSurface_Name { get; set; } = "Table_1";
+        [Description("是否启用SQL功能"), Category("SQL-控件参数")]
+        public bool SQL_Enable
+        {
+            get => sql_Enable;
+            set
+            {
+                sql_Enable = value;
+            }
+        }
+        private bool sql_Enable = false;
         /// <summary>
         /// PLC通讯对象
         /// </summary>
         DataGridView_PLC pLC;
         #endregion
-        public DADataGridView_TO_PLC()
+        #region SQL操作对象
+        DADataGridView_SQL gridView_SQL;
+        #endregion
+        public DADataGridView_PLCSQL()
         {
             pLC = new DataGridView_PLC();
-            PLC_time.Start();
-            PLC_time.Tick += new EventHandler(Time_tick);
 
         }
         protected override void InitLayout()//加载状态栏
         {
             base.InitLayout();
             //添加控件参数
-            this.Columns.Clear();
-            for (int i = 0; i < 10; i++)
+            if (!SQL_Enable) return;
+            this.BeginInvoke((EventHandler)delegate
             {
-                if (this.DataGridView_Name[i] == null)
+                using (SqlConnection sqlConnection = new SqlConnection(this.@SqlString))
                 {
-                    if (this.DataGridViewPLC_Time)
+                    try
                     {
-                        DataGridViewTextBoxColumn TextBoxTime = new DataGridViewTextBoxColumn();
-                        TextBoxTime.HeaderText = "读取PLC时间";
-                        TextBoxTime.ToolTipText = "读取PLC时间";
-                        TextBoxTime.Width = 120;
-                        this.Columns.Add(TextBoxTime);
+                        sqlConnection.Open();
+                        sqlConnection.Close();
                     }
-                    break;
+                    catch
+                    {
+                        throw new Exception("链接SQL数据库错误--请检查链接字符串");
+                    }
                 }
-                DataGridViewTextBoxColumn TextBoxColumn = new DataGridViewTextBoxColumn();
-                TextBoxColumn.HeaderText = this.DataGridView_Name[i];
-                TextBoxColumn.ToolTipText = this.DataGridView_Name[i];
-                TextBoxColumn.Width = this.CreateGraphics().MeasureString(this.DataGridView_Name[i], this.Font).Width > TextBoxColumn.Width ? Convert.ToInt32(this.CreateGraphics().MeasureString(this.DataGridView_Name[i], this.Font).Width + 20) : TextBoxColumn.Width;
-                this.Columns.Add(TextBoxColumn);
-            }
-            //自动改变控件大小
-            int Siz = 0;
-            for(int i=0;i<this.ColumnCount;i++)
-            {
-                Siz += this.Columns[i].Width;
-            }
-            this.Size = new Size(Siz + 60,this.Size.Height);
+                gridView_SQL = new DADataGridView_SQL(this.@SqlString, this.@SqlSurface_Name);
+                gridView_SQL.skinDataGridView_update(this);
+
+                //获取SQL数据正常再启动定时器
+                PLC_time.Start();
+                PLC_time.Tick += new EventHandler(Time_tick);
+            });
         }
         protected override void Dispose(bool disposing)//释放托管资源
         {
@@ -167,23 +182,22 @@ namespace Bottom_Control.基本控件
         /// <param name="e"></param>
         private void Time_tick(object send, EventArgs e)
         {
-            if (!plc_Enable) return;//用户不开启PLC功能
+            if (!plc_Enable||!sql_Enable) return;//用户不开启PLC功能
             lock (this)
             {
                 this.BeginInvoke((EventHandler)delegate
                 {
-                    List<string> Data = pLC.plc(this, this, this.DataGridViewPLC_Time ? this.Columns.Count - 1 : this.Columns.Count);
-                    if (Data.Count == (this.DataGridViewPLC_Time ? this.Columns.Count - 1 : this.Columns.Count))
+                    List<string> Data = pLC.plc(this, this, this.Columns.Count);
+                    if (Data.Count == (this.Columns.Count))
                     {
                         int index = this.Rows.Add();
                         for (int i = 0; i < Data.Count; i++)
                         {
                             this.Rows[index].Cells[i].Value = Data[i];
                         }
-                        if (this.DataGridViewPLC_Time)
-                            this.Rows[index].Cells[this.Rows[index].Cells.Count - 1].Value = DateTime.Now.ToString();
                     }
                     this.FirstDisplayedScrollingRowIndex = this.Rows.Count - 1;
+                    this.gridView_SQL.skinDataGridView_modification(this);
                 });
             }
         }

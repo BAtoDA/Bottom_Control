@@ -26,11 +26,11 @@ namespace Bottom_Control.基本控件
     //  修改说明： 
     //==============================================================
     /// <summary>
-    /// 实现上位机底层控件 文本类 -不再公共运行时
+    /// 实现从PLC出读取自定寄存器进行圆形图显示
     /// </summary>
     [ToolboxItem(true)]
     [Browsable(true)]
-    [Description("实现上位机底层控件 定时从PLC自定寄存器读取数据  PLC读取表格类 -不再公共运行时")]
+    [Description("实现从PLC出读取自定寄存器进行圆形图显示 -不再公共运行时")]
     class Doughnut_PLC : Chart, TextBox_base, DataGridViewPLC_base, Doughnut_Base
     {
         #region 实现接口参数
@@ -90,7 +90,6 @@ namespace Bottom_Control.基本控件
             }
         }
         private string plc_Address = "0";
-        [Description("设置访问PLC的类型 包含显示数据的类型"), Category("PLC-控件参数")]
         public numerical_format numerical { get; set; } = numerical_format.Signed_16_Bit;
         [DefaultValue(typeof(int), "8")]
         public int Decimal_Above { get; set; } = 8;

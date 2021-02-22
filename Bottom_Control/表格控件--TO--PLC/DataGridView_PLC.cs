@@ -56,5 +56,37 @@ namespace Bottom_Control.表格控件__TO__PLC
             }
             return Data;
         }
+        public List<string> plc(TextBox_base textBox, Histogram_base dataGridView, int Idx)//根据PLC类型写入
+        {
+            List<string> Data = new List<string>();
+            switch (textBox.Plc)
+            {
+                case PLC.Mitsubishi:
+                    IPLC_interface mitsubishi = new Mitsubishi_realize();//实例化接口--实现三菱在线访问
+                    if (mitsubishi.PLC_ready)
+                    {
+                        for (int i = 0; i < Idx; i++)
+                            Data.Add(mitsubishi.PLC_read_D_register(textBox.PLC_Contact, dataGridView.Total_address[i].ToString(), dataGridView.Histogram_numerical[i]));
+                    }
+                    break;
+                case PLC.Siemens:
+                    IPLC_interface Siemens = new Siemens_realize();//实例化接口--实现西门子在线访问
+                    if (Siemens.PLC_ready)
+                    {
+                        for (int i = 0; i < Idx; i++)
+                            Data.Add(Siemens.PLC_read_D_register(textBox.PLC_Contact, dataGridView.Total_address[i].ToString(), dataGridView.Histogram_numerical[i]));
+                    }
+                    break;
+                case PLC.MODBUS_TCP:
+                    MODBUD_TCP MODBUD_TCP = new MODBUD_TCP();//实例化接口--实现MODBUS TCP
+                    if (MODBUD_TCP.IPLC_interface_PLC_ready)
+                    {
+                        for (int i = 0; i < Idx; i++)
+                            Data.Add(MODBUD_TCP.IPLC_interface_PLC_read_D_register(textBox.PLC_Contact, dataGridView.Total_address[i].ToString(), dataGridView.Histogram_numerical[i]));
+                    }
+                    break;
+            }
+            return Data;
+        }
     }
 }
