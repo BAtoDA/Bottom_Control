@@ -30,26 +30,28 @@ namespace Bottom_Control
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.daIhatetheqrcode_PLC1 = new Bottom_Control.基本控件.DAIhatetheqrcode_PLC();
+            this.daDataGridView_PLCSQL1 = new Bottom_Control.基本控件.DADataGridView_PLCSQL();
             this.oscillogram_PLC1 = new Bottom_Control.基本控件.Oscillogram_PLC();
             this.histogram_PLC1 = new Bottom_Control.基本控件.Histogram_PLC();
             this.doughnut_PLC1 = new Bottom_Control.基本控件.Doughnut_PLC();
@@ -63,15 +65,16 @@ namespace Bottom_Control
             this.daConduit1 = new Bottom_Control.基本控件.DAConduit();
             this.daPond1 = new Bottom_Control.基本控件.DAPond();
             this.plC_Open_Time1 = new Bottom_Control.设置控件.PLC_Open_Time();
-            this.daDataGridView_PLCSQL1 = new Bottom_Control.基本控件.DADataGridView_PLCSQL();
-            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ihatetheqrcodeSQL11 = new Bottom_Control.基本控件.IhatetheqrcodeSQL();
+            this.dataGridViewTextBoxColumn35 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn36 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn37 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn38 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.daIhatetheqrcode_PLC1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.daDataGridView_PLCSQL1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.oscillogram_PLC1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.histogram_PLC1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.doughnut_PLC1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.daDataGridView_PLCSQL1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridViewTextBoxColumn1
@@ -112,31 +115,143 @@ namespace Bottom_Control
             this.dataGridViewTextBoxColumn6.ToolTipText = "读取PLC时间";
             this.dataGridViewTextBoxColumn6.Width = 120;
             // 
+            // daIhatetheqrcode_PLC1
+            // 
+            this.daIhatetheqrcode_PLC1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("daIhatetheqrcode_PLC1.BackgroundImage")));
+            this.daIhatetheqrcode_PLC1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.daIhatetheqrcode_PLC1.Control_Text = "0000";
+            this.daIhatetheqrcode_PLC1.Location = new System.Drawing.Point(4, 395);
+            this.daIhatetheqrcode_PLC1.Name = "daIhatetheqrcode_PLC1";
+            this.daIhatetheqrcode_PLC1.PLC_Address = "0";
+            this.daIhatetheqrcode_PLC1.PLC_Contact = "D";
+            this.daIhatetheqrcode_PLC1.PLC_Enable = false;
+            this.daIhatetheqrcode_PLC1.select = false;
+            this.daIhatetheqrcode_PLC1.Size = new System.Drawing.Size(335, 199);
+            this.daIhatetheqrcode_PLC1.TabIndex = 15;
+            this.daIhatetheqrcode_PLC1.TabStop = false;
+            this.daIhatetheqrcode_PLC1.Text = "0000";
+            // 
+            // daDataGridView_PLCSQL1
+            // 
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.daDataGridView_PLCSQL1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+            this.daDataGridView_PLCSQL1.AutoGenerateColumns = false;
+            this.daDataGridView_PLCSQL1.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.daDataGridView_PLCSQL1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.daDataGridView_PLCSQL1.ColumnFont = null;
+            this.daDataGridView_PLCSQL1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(239)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.daDataGridView_PLCSQL1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            this.daDataGridView_PLCSQL1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.daDataGridView_PLCSQL1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn35,
+            this.dataGridViewTextBoxColumn36,
+            this.dataGridViewTextBoxColumn37,
+            this.dataGridViewTextBoxColumn38});
+            this.daDataGridView_PLCSQL1.ColumnSelectForeColor = System.Drawing.SystemColors.HighlightText;
+            this.daDataGridView_PLCSQL1.Control_Text = "";
+            this.daDataGridView_PLCSQL1.DataGridView_Name = new string[] {
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null};
+            this.daDataGridView_PLCSQL1.DataGridView_numerical = new Bottom_Control.numerical_format[] {
+        Bottom_Control.numerical_format.BCD_16_Bit,
+        Bottom_Control.numerical_format.BCD_16_Bit,
+        Bottom_Control.numerical_format.BCD_16_Bit,
+        Bottom_Control.numerical_format.BCD_16_Bit,
+        Bottom_Control.numerical_format.BCD_16_Bit,
+        Bottom_Control.numerical_format.BCD_16_Bit,
+        Bottom_Control.numerical_format.BCD_16_Bit,
+        Bottom_Control.numerical_format.BCD_16_Bit,
+        Bottom_Control.numerical_format.BCD_16_Bit,
+        Bottom_Control.numerical_format.BCD_16_Bit};
+            this.daDataGridView_PLCSQL1.DataGridViewPLC_Time = false;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(188)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.daDataGridView_PLCSQL1.DefaultCellStyle = dataGridViewCellStyle11;
+            this.daDataGridView_PLCSQL1.EnableHeadersVisualStyles = false;
+            this.daDataGridView_PLCSQL1.GridColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.daDataGridView_PLCSQL1.HeadFont = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.daDataGridView_PLCSQL1.HeadSelectForeColor = System.Drawing.SystemColors.HighlightText;
+            this.daDataGridView_PLCSQL1.Location = new System.Drawing.Point(765, -2);
+            this.daDataGridView_PLCSQL1.Name = "daDataGridView_PLCSQL1";
+            this.daDataGridView_PLCSQL1.numerical = Bottom_Control.numerical_format.Signed_16_Bit;
+            this.daDataGridView_PLCSQL1.PLC_address = new double[] {
+        0D,
+        0D,
+        0D,
+        0D,
+        0D,
+        0D,
+        0D,
+        0D,
+        0D,
+        0D};
+            this.daDataGridView_PLCSQL1.PLC_Address = "0";
+            this.daDataGridView_PLCSQL1.PLC_Contact = "D";
+            this.daDataGridView_PLCSQL1.PLC_Enable = false;
+            this.daDataGridView_PLCSQL1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.daDataGridView_PLCSQL1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            this.daDataGridView_PLCSQL1.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            this.daDataGridView_PLCSQL1.RowTemplate.Height = 23;
+            this.daDataGridView_PLCSQL1.Size = new System.Drawing.Size(335, 164);
+            this.daDataGridView_PLCSQL1.SQL_Enable = true;
+            this.daDataGridView_PLCSQL1.SqlString = "data source=DESKTOP-955LB02\\SQLEXPRESS;initial catalog=XN;persist security info=T" +
+    "rue;user id=sa;password=3131458;MultipleActiveResultSets=True;App=EntityFramewor" +
+    "k";
+            this.daDataGridView_PLCSQL1.SqlSurface_Name = "Table_1";
+            this.daDataGridView_PLCSQL1.TabIndex = 14;
+            this.daDataGridView_PLCSQL1.TitleBack = null;
+            this.daDataGridView_PLCSQL1.TitleBackColorBegin = System.Drawing.Color.White;
+            this.daDataGridView_PLCSQL1.TitleBackColorEnd = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(196)))), ((int)(((byte)(242)))));
+            // 
             // oscillogram_PLC1
             // 
             this.oscillogram_PLC1.Background_colo = System.Drawing.Color.Transparent;
             this.oscillogram_PLC1.Chart_Interval = 5;
             this.oscillogram_PLC1.Chart_Maximum = 100;
             this.oscillogram_PLC1.Chart_Minimum = 0;
-            chartArea4.Name = "ChartArea1";
-            this.oscillogram_PLC1.ChartAreas.Add(chartArea4);
+            chartArea7.Name = "ChartArea1";
+            this.oscillogram_PLC1.ChartAreas.Add(chartArea7);
             this.oscillogram_PLC1.color = System.Drawing.Color.Red;
             this.oscillogram_PLC1.Control_Text = "oscillogram_PLC1";
             this.oscillogram_PLC1.Font_Color = System.Drawing.Color.DarkCyan;
             this.oscillogram_PLC1.Histogram_Chart_Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Bold);
             this.oscillogram_PLC1.Histogram_Chart_Name = "数据分析图";
             this.oscillogram_PLC1.Histogram_Chart_Text = "数据表";
-            legend4.Name = "Legend1";
-            this.oscillogram_PLC1.Legends.Add(legend4);
+            legend7.Name = "Legend1";
+            this.oscillogram_PLC1.Legends.Add(legend7);
             this.oscillogram_PLC1.Location = new System.Drawing.Point(379, 394);
             this.oscillogram_PLC1.Name = "oscillogram_PLC1";
             this.oscillogram_PLC1.PLC_Address = "0";
             this.oscillogram_PLC1.PLC_Contact = "D";
             this.oscillogram_PLC1.PLC_Enable = false;
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.oscillogram_PLC1.Series.Add(series4);
+            series7.ChartArea = "ChartArea1";
+            series7.Legend = "Legend1";
+            series7.Name = "Series1";
+            this.oscillogram_PLC1.Series.Add(series7);
             this.oscillogram_PLC1.Size = new System.Drawing.Size(380, 200);
             this.oscillogram_PLC1.TabIndex = 13;
             this.oscillogram_PLC1.Text = "oscillogram_PLC1";
@@ -146,8 +261,8 @@ namespace Bottom_Control
             // 
             this.histogram_PLC1.background_colo = System.Drawing.Color.Empty;
             this.histogram_PLC1.Background_colo = System.Drawing.Color.Transparent;
-            chartArea5.Name = "ChartArea1";
-            this.histogram_PLC1.ChartAreas.Add(chartArea5);
+            chartArea8.Name = "ChartArea1";
+            this.histogram_PLC1.ChartAreas.Add(chartArea8);
             this.histogram_PLC1.color = System.Drawing.Color.Empty;
             this.histogram_PLC1.Control_Text = "histogram_PLC1";
             this.histogram_PLC1.DataGridView_Name = new string[] {
@@ -202,8 +317,8 @@ namespace Bottom_Control
         Bottom_Control.numerical_format.BCD_16_Bit,
         Bottom_Control.numerical_format.BCD_16_Bit,
         Bottom_Control.numerical_format.BCD_16_Bit};
-            legend5.Name = "Legend1";
-            this.histogram_PLC1.Legends.Add(legend5);
+            legend8.Name = "Legend1";
+            this.histogram_PLC1.Legends.Add(legend8);
             this.histogram_PLC1.Location = new System.Drawing.Point(379, 188);
             this.histogram_PLC1.Name = "histogram_PLC1";
             this.histogram_PLC1.numerical = Bottom_Control.numerical_format.Signed_16_Bit;
@@ -221,10 +336,10 @@ namespace Bottom_Control
             this.histogram_PLC1.PLC_Address = "0";
             this.histogram_PLC1.PLC_Contact = "D";
             this.histogram_PLC1.PLC_Enable = false;
-            series5.ChartArea = "ChartArea1";
-            series5.Legend = "Legend1";
-            series5.Name = "Series1";
-            this.histogram_PLC1.Series.Add(series5);
+            series8.ChartArea = "ChartArea1";
+            series8.Legend = "Legend1";
+            series8.Name = "Series1";
+            this.histogram_PLC1.Series.Add(series8);
             this.histogram_PLC1.Size = new System.Drawing.Size(380, 200);
             this.histogram_PLC1.TabIndex = 12;
             this.histogram_PLC1.Text = "histogram_PLC1";
@@ -243,8 +358,8 @@ namespace Bottom_Control
             // doughnut_PLC1
             // 
             this.doughnut_PLC1.background_colo = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            chartArea6.Name = "ChartArea1";
-            this.doughnut_PLC1.ChartAreas.Add(chartArea6);
+            chartArea9.Name = "ChartArea1";
+            this.doughnut_PLC1.ChartAreas.Add(chartArea9);
             this.doughnut_PLC1.color = System.Drawing.Color.Yellow;
             this.doughnut_PLC1.Control_Text = "doughnut_PLC1";
             this.doughnut_PLC1.DataGridView_Name = new string[] {
@@ -273,8 +388,8 @@ namespace Bottom_Control
             this.doughnut_PLC1.doughnut_Chart_Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.doughnut_PLC1.doughnut_Chart_Name = "Chart1";
             this.doughnut_PLC1.doughnut_Chart_Text = "Chart_Text";
-            legend6.Name = "Legend1";
-            this.doughnut_PLC1.Legends.Add(legend6);
+            legend9.Name = "Legend1";
+            this.doughnut_PLC1.Legends.Add(legend9);
             this.doughnut_PLC1.Location = new System.Drawing.Point(379, 12);
             this.doughnut_PLC1.Name = "doughnut_PLC1";
             this.doughnut_PLC1.numerical = Bottom_Control.numerical_format.Signed_16_Bit;
@@ -292,10 +407,10 @@ namespace Bottom_Control
             this.doughnut_PLC1.PLC_Address = "0";
             this.doughnut_PLC1.PLC_Contact = "D";
             this.doughnut_PLC1.PLC_Enable = true;
-            series6.ChartArea = "ChartArea1";
-            series6.Legend = "Legend1";
-            series6.Name = "Series1";
-            this.doughnut_PLC1.Series.Add(series6);
+            series9.ChartArea = "ChartArea1";
+            series9.Legend = "Legend1";
+            series9.Name = "Series1";
+            this.doughnut_PLC1.Series.Add(series9);
             this.doughnut_PLC1.Size = new System.Drawing.Size(380, 164);
             this.doughnut_PLC1.TabIndex = 11;
             this.doughnut_PLC1.Text = "doughnut_PLC1";
@@ -519,131 +634,51 @@ namespace Bottom_Control
             this.plC_Open_Time1.MitsubishiPort = 506;
             this.plC_Open_Time1.ModBusIP = "192.168.3.20";
             // 
-            // daDataGridView_PLCSQL1
+            // ihatetheqrcodeSQL11
             // 
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
-            this.daDataGridView_PLCSQL1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.daDataGridView_PLCSQL1.AutoGenerateColumns = false;
-            this.daDataGridView_PLCSQL1.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.daDataGridView_PLCSQL1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.daDataGridView_PLCSQL1.ColumnFont = null;
-            this.daDataGridView_PLCSQL1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(239)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.daDataGridView_PLCSQL1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.daDataGridView_PLCSQL1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.daDataGridView_PLCSQL1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn15,
-            this.dataGridViewTextBoxColumn16,
-            this.dataGridViewTextBoxColumn17,
-            this.dataGridViewTextBoxColumn18});
-            this.daDataGridView_PLCSQL1.ColumnSelectForeColor = System.Drawing.SystemColors.HighlightText;
-            this.daDataGridView_PLCSQL1.Control_Text = "";
-            this.daDataGridView_PLCSQL1.DataGridView_Name = new string[] {
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null};
-            this.daDataGridView_PLCSQL1.DataGridView_numerical = new Bottom_Control.numerical_format[] {
-        Bottom_Control.numerical_format.BCD_16_Bit,
-        Bottom_Control.numerical_format.BCD_16_Bit,
-        Bottom_Control.numerical_format.BCD_16_Bit,
-        Bottom_Control.numerical_format.BCD_16_Bit,
-        Bottom_Control.numerical_format.BCD_16_Bit,
-        Bottom_Control.numerical_format.BCD_16_Bit,
-        Bottom_Control.numerical_format.BCD_16_Bit,
-        Bottom_Control.numerical_format.BCD_16_Bit,
-        Bottom_Control.numerical_format.BCD_16_Bit,
-        Bottom_Control.numerical_format.BCD_16_Bit};
-            this.daDataGridView_PLCSQL1.DataGridViewPLC_Time = false;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(188)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.daDataGridView_PLCSQL1.DefaultCellStyle = dataGridViewCellStyle7;
-            this.daDataGridView_PLCSQL1.EnableHeadersVisualStyles = false;
-            this.daDataGridView_PLCSQL1.GridColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.daDataGridView_PLCSQL1.HeadFont = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.daDataGridView_PLCSQL1.HeadSelectForeColor = System.Drawing.SystemColors.HighlightText;
-            this.daDataGridView_PLCSQL1.Location = new System.Drawing.Point(765, 12);
-            this.daDataGridView_PLCSQL1.Name = "daDataGridView_PLCSQL1";
-            this.daDataGridView_PLCSQL1.numerical = Bottom_Control.numerical_format.Signed_16_Bit;
-            this.daDataGridView_PLCSQL1.PLC_address = new double[] {
-        0D,
-        0D,
-        0D,
-        0D,
-        0D,
-        0D,
-        0D,
-        0D,
-        0D,
-        0D};
-            this.daDataGridView_PLCSQL1.PLC_Address = "0";
-            this.daDataGridView_PLCSQL1.PLC_Contact = "D";
-            this.daDataGridView_PLCSQL1.PLC_Enable = false;
-            this.daDataGridView_PLCSQL1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.daDataGridView_PLCSQL1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            this.daDataGridView_PLCSQL1.RowsDefaultCellStyle = dataGridViewCellStyle8;
-            this.daDataGridView_PLCSQL1.RowTemplate.Height = 23;
-            this.daDataGridView_PLCSQL1.Size = new System.Drawing.Size(335, 164);
-            this.daDataGridView_PLCSQL1.SQL_Enable = true;
-            this.daDataGridView_PLCSQL1.SqlString = "data source=DESKTOP-955LB02\\SQLEXPRESS;initial catalog=XN;persist security info=T" +
+            this.ihatetheqrcodeSQL11.Column_Name = "plc1";
+            this.ihatetheqrcodeSQL11.Location = new System.Drawing.Point(765, 124);
+            this.ihatetheqrcodeSQL11.Name = "ihatetheqrcodeSQL11";
+            this.ihatetheqrcodeSQL11.select = false;
+            this.ihatetheqrcodeSQL11.Size = new System.Drawing.Size(383, 470);
+            this.ihatetheqrcodeSQL11.SQL_Enable = true;
+            this.ihatetheqrcodeSQL11.SqlString = "data source=DESKTOP-955LB02\\SQLEXPRESS;initial catalog=XN;persist security info=T" +
     "rue;user id=sa;password=3131458;MultipleActiveResultSets=True;App=EntityFramewor" +
     "k";
-            this.daDataGridView_PLCSQL1.SqlSurface_Name = "Table_1";
-            this.daDataGridView_PLCSQL1.TabIndex = 14;
-            this.daDataGridView_PLCSQL1.TitleBack = null;
-            this.daDataGridView_PLCSQL1.TitleBackColorBegin = System.Drawing.Color.White;
-            this.daDataGridView_PLCSQL1.TitleBackColorEnd = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(196)))), ((int)(((byte)(242)))));
+            this.ihatetheqrcodeSQL11.SqlSurface_Name = "Table_1";
+            this.ihatetheqrcodeSQL11.TabIndex = 16;
             // 
-            // dataGridViewTextBoxColumn15
+            // dataGridViewTextBoxColumn35
             // 
-            this.dataGridViewTextBoxColumn15.DataPropertyName = "ID";
-            this.dataGridViewTextBoxColumn15.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            this.dataGridViewTextBoxColumn35.DataPropertyName = "ID";
+            this.dataGridViewTextBoxColumn35.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn35.Name = "dataGridViewTextBoxColumn35";
             // 
-            // dataGridViewTextBoxColumn16
+            // dataGridViewTextBoxColumn36
             // 
-            this.dataGridViewTextBoxColumn16.DataPropertyName = "plc1";
-            this.dataGridViewTextBoxColumn16.HeaderText = "plc1";
-            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            this.dataGridViewTextBoxColumn36.DataPropertyName = "plc1";
+            this.dataGridViewTextBoxColumn36.HeaderText = "plc1";
+            this.dataGridViewTextBoxColumn36.Name = "dataGridViewTextBoxColumn36";
             // 
-            // dataGridViewTextBoxColumn17
+            // dataGridViewTextBoxColumn37
             // 
-            this.dataGridViewTextBoxColumn17.DataPropertyName = "plc2";
-            this.dataGridViewTextBoxColumn17.HeaderText = "plc2";
-            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            this.dataGridViewTextBoxColumn37.DataPropertyName = "plc2";
+            this.dataGridViewTextBoxColumn37.HeaderText = "plc2";
+            this.dataGridViewTextBoxColumn37.Name = "dataGridViewTextBoxColumn37";
             // 
-            // dataGridViewTextBoxColumn18
+            // dataGridViewTextBoxColumn38
             // 
-            this.dataGridViewTextBoxColumn18.DataPropertyName = "plc3";
-            this.dataGridViewTextBoxColumn18.HeaderText = "plc3";
-            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            this.dataGridViewTextBoxColumn38.DataPropertyName = "plc3";
+            this.dataGridViewTextBoxColumn38.HeaderText = "plc3";
+            this.dataGridViewTextBoxColumn38.Name = "dataGridViewTextBoxColumn38";
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1160, 586);
+            this.Controls.Add(this.ihatetheqrcodeSQL11);
+            this.Controls.Add(this.daIhatetheqrcode_PLC1);
             this.Controls.Add(this.daDataGridView_PLCSQL1);
             this.Controls.Add(this.oscillogram_PLC1);
             this.Controls.Add(this.histogram_PLC1);
@@ -660,10 +695,11 @@ namespace Bottom_Control
             this.Name = "Form2";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.daIhatetheqrcode_PLC1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.daDataGridView_PLCSQL1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.oscillogram_PLC1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.histogram_PLC1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.doughnut_PLC1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.daDataGridView_PLCSQL1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -702,5 +738,27 @@ namespace Bottom_Control
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
+        private 基本控件.DAIhatetheqrcode_PLC daIhatetheqrcode_PLC1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn26;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn27;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn28;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn29;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn30;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn31;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn32;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn33;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn34;
+        private 基本控件.IhatetheqrcodeSQL ihatetheqrcodeSQL11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn35;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn36;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn37;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn38;
     }
 }
