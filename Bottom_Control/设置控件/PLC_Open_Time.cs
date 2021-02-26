@@ -8,6 +8,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.ComponentModel;
 using Bottom_Control.PLC通讯协议;
+using HslCommunication.Profinet;
 
 namespace Bottom_Control.设置控件
 {
@@ -57,6 +58,8 @@ namespace Bottom_Control.设置控件
                 Siemens_ip = IPAddress.TryParse(value, out Siemens_ip) ? Siemens_ip = IPAddress.Parse(value) : Siemens_ip = IPAddress.Parse("192.168.3.10");
             }
         }
+        [Description("根据PLC 选择具体PLC型号"), Category("西门子PLC参数")]
+        public SiemensPLCS siemensPLCS { get; set; } = SiemensPLCS.S200Smart;
         private IPAddress Siemens_ip = IPAddress.Parse("192.168.3.10");
         [Description("根据PLC 提供的端口进行填写 西门子PLC需要在以太网配置勾选S7协议"), Category("西门子PLC参数")]
         [DefaultValue(typeof(int), "102")]
@@ -145,6 +148,7 @@ namespace Bottom_Control.设置控件
                     Mitsubishi.IPEndPoint.Address = Mitsubishi_ip;
                     Mitsubishi.IPEndPoint.Port = MitsubishiPort;
                     Siemens.IPEndPoint.Address = ModBus_ip;
+                    Siemens = new Siemens_realize(Siemens.IPEndPoint,siemensPLCS);
                     MODBUD_TCP.IPEndPoint.Address = ModBus_ip;
                     MODBUD_TCP.IPEndPoint.Port = ModBusPort;
                     if (Mitsubishi_Open & !Mitsubishi.PLC_ready)

@@ -147,10 +147,8 @@ namespace Bottom_Control.基本控件
         {
             base.DefWndProc(ref m);
         }
-        protected override void OnLayout(LayoutEventArgs e)
+        protected override void OnParentChanged(EventArgs e)//加载状态栏
         {
-            //base.OnParentChanged(e);
-            //base.InitLayout();
             //添加控件参数
             if (!SQL_Enable) return;
             this.BeginInvoke((EventHandler)delegate

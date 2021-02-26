@@ -27,7 +27,7 @@ namespace Bottom_Control.基本控件
     /// <summary>
     /// 实现上位机底层控件 文本类 -不再公共运行时
     /// </summary>
-    [ToolboxItem(true)]
+    [ToolboxItem(false)]
     [Browsable(true)]
     [Description("实现上位机底层控件 定时从PLC自定寄存器读取数据  PLC读取表格类 -不再公共运行时")]
     class DADataGridView_TO_PLC: SkinDataGridView, TextBox_base, DataGridViewPLC_base
@@ -120,9 +120,8 @@ namespace Bottom_Control.基本控件
             pLC = new DataGridView_PLC();
 
         }
-        protected override void OnParentChanged(EventArgs e)//加载状态栏
+        public void OnParentChanged1(EventArgs e)//加载状态栏
         {
-            base.InitLayout();
             //添加控件参数
             this.Columns.Clear();
             for (int i = 0; i < 10; i++)

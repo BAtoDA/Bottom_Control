@@ -73,11 +73,11 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form3.cs">
+    <Compile Include="Form2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form3.Designer.cs">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
     <Compile Include="PLC.cs" />
     <Compile Include="PLC参数设置界面\ButtonBitForm1.cs">
@@ -111,6 +111,12 @@
     <Compile Include="二维码生成\IhatetheqrcodeCreate.cs" />
     <Compile Include="基本控件\DADataGridView_PLCSQL.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="基本控件\DADataGridView_TO_PLCE.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="基本控件\DADataGridView_TO_PLCE.Designer.cs">
+      <DependentUpon>DADataGridView_TO_PLCE.cs</DependentUpon>
     </Compile>
     <Compile Include="基本控件\DADataGridView_TO_SQL.cs">
       <SubType>Component</SubType>
@@ -219,8 +225,8 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form3.resx">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PLC参数设置界面\ButtonBitForm1.resx">
       <DependentUpon>ButtonBitForm1.cs</DependentUpon>
@@ -240,6 +246,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="基本控件\DADataGridView_TO_PLCE.resx">
+      <DependentUpon>DADataGridView_TO_PLCE.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="基本控件\IhatetheqrcodeSQL.resx">
       <DependentUpon>IhatetheqrcodeSQL.cs</DependentUpon>
     </EmbeddedResource>

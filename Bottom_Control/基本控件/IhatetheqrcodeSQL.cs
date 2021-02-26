@@ -73,8 +73,11 @@ namespace Bottom_Control.基本控件
         {
             InitializeComponent();
         }
-
-        private void IhatetheqrcodeSQL1_Load(object sender, EventArgs e)//控件加载事件 从SQL数据库获取数据
+        protected override void OnParentChanged(EventArgs e)//加载状态栏
+        {
+            IhatetheqrcodeSQL1_Load1(this, new EventArgs());
+        }
+        private void IhatetheqrcodeSQL1_Load1(object sender, EventArgs e)//控件加载事件 从SQL数据库获取数据
         {
             ihatetheqrcode = new IhatetheqrcodeCreate();
             if (SQL_Enable)
@@ -113,7 +116,7 @@ namespace Bottom_Control.基本控件
 
         private void skinButton2_Click(object sender, EventArgs e)//刷新数据库
         {
-            this.IhatetheqrcodeSQL1_Load(this, new EventArgs());
+            this.IhatetheqrcodeSQL1_Load1(this, new EventArgs());
         }
 
         private void skinButton1_Click(object sender, EventArgs e)//扫码完成事件

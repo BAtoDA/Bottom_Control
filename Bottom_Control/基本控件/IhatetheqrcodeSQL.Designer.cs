@@ -275,7 +275,7 @@ namespace Bottom_Control.基本控件
             this.Controls.Add(this.uiPanel1);
             this.Name = "IhatetheqrcodeSQL";
             this.Size = new System.Drawing.Size(337, 450);
-            this.Load += new System.EventHandler(this.IhatetheqrcodeSQL1_Load);
+            this.Load += new System.EventHandler(this.IhatetheqrcodeSQL1_Load1);
             this.uiPanel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
