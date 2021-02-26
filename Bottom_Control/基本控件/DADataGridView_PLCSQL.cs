@@ -143,13 +143,20 @@ namespace Bottom_Control.基本控件
             pLC = new DataGridView_PLC();
 
         }
-        protected override void InitLayout()//加载状态栏
+        protected override void DefWndProc(ref Message m)
         {
-            base.InitLayout();
+            base.DefWndProc(ref m);
+        }
+        protected override void OnLayout(LayoutEventArgs e)
+        {
+            //base.OnParentChanged(e);
+            //base.InitLayout();
             //添加控件参数
             if (!SQL_Enable) return;
             this.BeginInvoke((EventHandler)delegate
             {
+                if (this.DataSource != null) return;
+
                 using (SqlConnection sqlConnection = new SqlConnection(this.@SqlString))
                 {
                     try
@@ -182,24 +189,23 @@ namespace Bottom_Control.基本控件
         /// <param name="e"></param>
         private void Time_tick(object send, EventArgs e)
         {
-            if (!plc_Enable||!sql_Enable) return;//用户不开启PLC功能
+            if (!plc_Enable || !sql_Enable) return;//用户不开启PLC功能
             lock (this)
             {
-                this.BeginInvoke((EventHandler)delegate
+
+                List<string> Data = pLC.plc(this, this, this.Columns.Count);
+                if (Data.Count == (this.Columns.Count))
                 {
-                    List<string> Data = pLC.plc(this, this, this.Columns.Count);
-                    if (Data.Count == (this.Columns.Count))
+                    int index = this.Rows.Add();
+                    for (int i = 0; i < Data.Count; i++)
                     {
-                        int index = this.Rows.Add();
-                        for (int i = 0; i < Data.Count; i++)
-                        {
-                            this.Rows[index].Cells[i].Value = Data[i];
-                        }
+                        this.Rows[index].Cells[i].Value = Data[i];
                     }
-                    this.FirstDisplayedScrollingRowIndex = this.Rows.Count - 1;
-                    this.gridView_SQL.skinDataGridView_modification(this);
-                });
+                }
+                this.FirstDisplayedScrollingRowIndex = this.Rows.Count - 1;
+                this.gridView_SQL.skinDataGridView_modification(this);
             }
         }
     }
 }
+

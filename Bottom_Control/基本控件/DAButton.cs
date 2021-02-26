@@ -12,7 +12,7 @@ using System.Threading;
 using Bottom_Control.按钮__TO__PLC方法;
 using Bottom_Control.控件类基;
 using Bottom_Control.PLC参数设置界面;
-
+using CCWin;
 namespace Bottom_Control
 {
     //==============================================================
@@ -30,7 +30,7 @@ namespace Bottom_Control
     [ToolboxItem(true)]
     [Browsable(true)]
     [Description("实现上位机底层控件 按钮类 -不再公共运行时 ")]
-    class DAButton : UIButton, Button_base
+    class DAButton :CCWin.SkinControl.SkinButton , Button_base
     {
         #region 实现接口参数
         public event EventHandler Modification;

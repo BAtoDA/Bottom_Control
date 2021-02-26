@@ -61,9 +61,8 @@ namespace Bottom_Control.基本控件
         {
             gridView_SQL = new DADataGridView_SQL(this.SqlString,SqlSurface_Name);
         }
-        protected override void InitLayout()//加载状态栏
+        protected override void OnParentChanged(EventArgs e)//加载状态栏
         {
-            base.InitLayout();
             //添加控件参数
             if (!SQL_Enable) return;
             this.BeginInvoke((EventHandler)delegate

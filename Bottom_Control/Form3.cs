@@ -7,20 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Sunny.UI;
 namespace Bottom_Control
 {
-    public partial class Form1 : Form
+    public partial class Form3 : Sunny.UI.UIForm
     {
-        public Form1()
+        public Form3()
         {
             InitializeComponent();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            this.plC_Open_Time1.Enabled = true;
-            this.plC_Open_Time1.Start();
         }
 
     }

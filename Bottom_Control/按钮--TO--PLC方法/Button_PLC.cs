@@ -231,8 +231,8 @@ namespace Bottom_Control.按钮__TO__PLC方法
                 case "DAButton":
                     DAButton Dabutton = button as DAButton;
                     Dabutton.Text = button_State == Button_state.ON ? Dabutton.Text_ON : Dabutton.Text_OFF;
-                    Dabutton.FillColor = button_State == Button_state.ON ? Dabutton.Backdrop_ON : Dabutton.Backdrop_OFF;
-                    Dabutton.RectColor = Dabutton.FillColor;
+                    Dabutton.BaseColor = button_State == Button_state.ON ? Dabutton.Backdrop_ON : Dabutton.Backdrop_OFF;
+                    //Dabutton.RectColor = Dabutton.FillColor;
                     break;
                 case "DACheckBox":
                     DACheckBox daCheckBox = button as DACheckBox;

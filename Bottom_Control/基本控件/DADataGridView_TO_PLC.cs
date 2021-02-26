@@ -118,11 +118,9 @@ namespace Bottom_Control.基本控件
         public DADataGridView_TO_PLC()
         {
             pLC = new DataGridView_PLC();
-            PLC_time.Start();
-            PLC_time.Tick += new EventHandler(Time_tick);
 
         }
-        protected override void InitLayout()//加载状态栏
+        protected override void OnParentChanged(EventArgs e)//加载状态栏
         {
             base.InitLayout();
             //添加控件参数
@@ -154,6 +152,8 @@ namespace Bottom_Control.基本控件
                 Siz += this.Columns[i].Width;
             }
             this.Size = new Size(Siz + 60,this.Size.Height);
+            PLC_time.Start();
+            PLC_time.Tick += new EventHandler(Time_tick);
         }
         protected override void Dispose(bool disposing)//释放托管资源
         {
@@ -167,7 +167,7 @@ namespace Bottom_Control.基本控件
         /// <param name="e"></param>
         private void Time_tick(object send, EventArgs e)
         {
-            if (!plc_Enable) return;//用户不开启PLC功能
+            if (!plc_Enable|| this.Columns.Count<1) return;//用户不开启PLC功能
             lock (this)
             {
                 this.BeginInvoke((EventHandler)delegate

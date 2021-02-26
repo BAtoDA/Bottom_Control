@@ -1,3 +1,0 @@
-﻿namespace Bottom_Control
-{
-}
