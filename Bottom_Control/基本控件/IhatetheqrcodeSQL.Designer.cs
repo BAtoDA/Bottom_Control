@@ -40,6 +40,7 @@ namespace Bottom_Control.基本控件
             this.skinLabel2 = new CCWin.SkinControl.SkinLabel();
             this.skinLabel1 = new CCWin.SkinControl.SkinLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.skinButton2 = new CCWin.SkinControl.SkinButton();
             this.uiPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -66,6 +67,7 @@ namespace Bottom_Control.基本控件
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.skinButton2);
             this.groupBox1.Controls.Add(this.skinButton1);
             this.groupBox1.Controls.Add(this.skinLabel3);
             this.groupBox1.Controls.Add(this.skinCheckBox1);
@@ -85,7 +87,7 @@ namespace Bottom_Control.基本控件
             this.skinButton1.BackColor = System.Drawing.Color.Transparent;
             this.skinButton1.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.skinButton1.DownBack = null;
-            this.skinButton1.Location = new System.Drawing.Point(240, 46);
+            this.skinButton1.Location = new System.Drawing.Point(240, 44);
             this.skinButton1.MouseBack = null;
             this.skinButton1.Name = "skinButton1";
             this.skinButton1.NormlBack = null;
@@ -158,6 +160,7 @@ namespace Bottom_Control.基本控件
             this.skinTextBox2.SkinTxt.Font = new System.Drawing.Font("微软雅黑", 9.75F);
             this.skinTextBox2.SkinTxt.Location = new System.Drawing.Point(5, 5);
             this.skinTextBox2.SkinTxt.Name = "BaseText";
+            this.skinTextBox2.SkinTxt.ReadOnly = true;
             this.skinTextBox2.SkinTxt.Size = new System.Drawing.Size(108, 18);
             this.skinTextBox2.SkinTxt.TabIndex = 0;
             this.skinTextBox2.SkinTxt.Text = "00";
@@ -202,6 +205,7 @@ namespace Bottom_Control.基本控件
             this.skinTextBox1.SkinTxt.Font = new System.Drawing.Font("微软雅黑", 9.75F);
             this.skinTextBox1.SkinTxt.Location = new System.Drawing.Point(5, 5);
             this.skinTextBox1.SkinTxt.Name = "BaseText";
+            this.skinTextBox1.SkinTxt.ReadOnly = true;
             this.skinTextBox1.SkinTxt.Size = new System.Drawing.Size(108, 18);
             this.skinTextBox1.SkinTxt.TabIndex = 0;
             this.skinTextBox1.SkinTxt.Text = "00";
@@ -249,6 +253,21 @@ namespace Bottom_Control.基本控件
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // skinButton2
+            // 
+            this.skinButton2.BackColor = System.Drawing.Color.Transparent;
+            this.skinButton2.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinButton2.DownBack = null;
+            this.skinButton2.Location = new System.Drawing.Point(240, 112);
+            this.skinButton2.MouseBack = null;
+            this.skinButton2.Name = "skinButton2";
+            this.skinButton2.NormlBack = null;
+            this.skinButton2.Size = new System.Drawing.Size(82, 31);
+            this.skinButton2.TabIndex = 7;
+            this.skinButton2.Text = "刷新";
+            this.skinButton2.UseVisualStyleBackColor = false;
+            this.skinButton2.Click += new System.EventHandler(this.skinButton2_Click);
+            // 
             // IhatetheqrcodeSQL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -277,5 +296,6 @@ namespace Bottom_Control.基本控件
         private CCWin.SkinControl.SkinLabel skinLabel2;
         private CCWin.SkinControl.SkinLabel skinLabel1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private CCWin.SkinControl.SkinButton skinButton2;
     }
 }

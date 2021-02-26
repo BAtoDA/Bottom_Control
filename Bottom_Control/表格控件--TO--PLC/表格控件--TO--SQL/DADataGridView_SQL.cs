@@ -44,7 +44,7 @@ namespace Bottom_Control.表格控件__TO__PLC.表格控件__TO__SQL
         {
             this.dataTable = new DataTable();//实例化缓存对象
             this.sqlCommandBuilder = new SqlCommandBuilder(this.sqlDataAdapter);
-            this.sqlDataAdapter.Update(this.dataTable);
+            this.sqlDataAdapter.Update((DataTable)skinDataGridView.DataSource);
         }
         public void skinDataGridView_RemoveAt(SkinDataGridView skinDataGridView)//获取数据库数据--删除行
         {

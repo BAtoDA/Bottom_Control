@@ -30,7 +30,7 @@ namespace Bottom_Control.基本控件
     public partial class IhatetheqrcodeSQL : UserControl
     {
         #region  控件属性
-        [Description("二维码生成类型 选择显示条形码还是二维码--默认二维码 false 二维码 true 条形码"), Category("PLC-控件参数")]
+        [Description("二维码生成类型 选择显示条形码还是二维码--默认二维码 false 二维码 true 条形码"), Category("SQL-控件参数")]
         /// <summary>
         /// 选择显示条形码还是二维码--默认二维码
         /// </summary>
@@ -65,7 +65,6 @@ namespace Bottom_Control.基本控件
         private DataTable DataTable_id;//定义ADO.NET缓存对象 保存显示二维码的主键ID
         private SqlDataAdapter sqlDataAdapter;//定义更新数据对象
         SqlConnection sqlConnection;//SQL连接对象
-        SqlCommandBuilder sqlCommandBuilder;
         public string SQL_statement;//SQL语句
         IhatetheqrcodeCreate ihatetheqrcode;
         int Line = 0, PresentLine = 0;
@@ -94,7 +93,6 @@ namespace Bottom_Control.基本控件
                 this.skinTextBox2.Text = 1.ToString();
                 if (this.dataTable.Rows.Count > 0)
                     this.Refresh_Data(this.dataTable.Rows[0].ItemArray[0].ToString());
-
             }
         }
         /// <summary>
@@ -111,6 +109,11 @@ namespace Bottom_Control.基本控件
                 this.pictureBox1.BackgroundImage = ihatetheqrcode.Generate1(Data, this.pictureBox1.Size.Width, this.pictureBox1.Size.Height);//加载二维码
             else
                 this.pictureBox1.BackgroundImage = ihatetheqrcode.Generate2(Data, this.pictureBox1.Size.Width, this.pictureBox1.Size.Height);//加载条形码
+        }
+
+        private void skinButton2_Click(object sender, EventArgs e)//刷新数据库
+        {
+            this.IhatetheqrcodeSQL1_Load(this, new EventArgs());
         }
 
         private void skinButton1_Click(object sender, EventArgs e)//扫码完成事件
