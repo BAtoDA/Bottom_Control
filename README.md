@@ -2,7 +2,7 @@
                                                            关于说明  
 1: 无代码访问PLC的控件 通过Visual Studio 拖拽控件设置相应的参数就可以访问PLC简单易用 适用于工业开发作为底层减少项目代码量提高稳定性  正在全力开发  
 2:视频展示链接：https://pan.baidu.com/s/12TFRdkp64Kqo6_oK1gdbNw 提取码: lo33  
-3:项目控件使用视频展示 https://pan.baidu.com/s/1Sd7JBtRMBqxguB0ZFbR3Zg 提取码： pkve
+3:项目控件使用视频展示 https://pan.baidu.com/s/1Sd7JBtRMBqxguB0ZFbR3Zg 提取码： pkve   
                                                            使用步骤 
 1：先拖拽plC_Open_Time1控件   
 2：设置好相应的PLC参数  
