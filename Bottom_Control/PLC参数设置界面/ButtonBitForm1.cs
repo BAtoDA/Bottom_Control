@@ -74,7 +74,7 @@ namespace Bottom_Control.PLC参数设置界面
         {
             if (e.KeyChar != '\b')//这是允许输入退格键  
             {
-                if ((e.KeyChar < '0') || (e.KeyChar > '9') || ((TextBox)sender).Text.Length > 3)//这是允许输入0-9数字 最大数据不能大于3位数  
+                if ((e.KeyChar < '0') || (e.KeyChar > '9') || ((TextBox)sender).Text.Length > 5)//这是允许输入0-9数字 最大数据不能大于5位数  
                 {
                     if (e.KeyChar == '.') return;
                     e.Handled = true;//只能输入数字

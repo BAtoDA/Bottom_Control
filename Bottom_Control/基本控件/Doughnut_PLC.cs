@@ -104,7 +104,21 @@ namespace Bottom_Control.基本控件
         [DefaultValue(typeof(string), "PLC_time")]
         public System.Windows.Forms.Timer PLC_time { get; } = new System.Windows.Forms.Timer() { Enabled = true, Interval = 500 };
         [Description("读取PLC的地址--对应表格列"), Category("PLC-控件参数")]
-        public double[] PLC_address { get; set; } = new double[10];
+        public string[] PLC_address
+        {
+            get => Plc_address;
+            set
+            {
+                for (int i = 0; i < value.Length; i++)
+                {
+                    if (Button_PLC.Address(value[i]))
+                        Plc_address[i] = value[i];
+                    else
+                        Plc_address[i] = "00";
+                }
+            }
+        }
+        string[] Plc_address = new string[10] { "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" };
         [Description("表格列显示的名称--对应表格列"), Category("PLC-控件参数")]
         public string[] DataGridView_Name { get; set; } = new string[10];
         [Description("表格列读取PLC的类型--对应表格列"), Category("PLC-控件参数")]

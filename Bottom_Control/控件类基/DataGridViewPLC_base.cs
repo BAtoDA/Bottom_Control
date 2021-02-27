@@ -23,7 +23,7 @@ namespace Bottom_Control.基本控件
         /// <summary>
         /// 需要访问的PLC地址
         /// </summary>
-        double[] PLC_address { get; set; }
+        string[] PLC_address { get; set; }
         /// <summary>
         /// 显示表格的名称
         /// </summary>

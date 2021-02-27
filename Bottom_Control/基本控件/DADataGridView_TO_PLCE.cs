@@ -40,7 +40,7 @@ namespace Bottom_Control.基本控件
         [DefaultValue(typeof(string), "PLC_time")]
         public System.Windows.Forms.Timer PLC_time { get => this.daDataGridView_TO_PLC2.PLC_time; }
         [Description("读取PLC的地址--对应表格列"), Category("PLC-控件参数")]
-        public double[] PLC_address { get => this.daDataGridView_TO_PLC2.PLC_address; set => this.daDataGridView_TO_PLC2.PLC_address = value; }
+        public string[] PLC_address { get => this.daDataGridView_TO_PLC2.PLC_address; set => this.daDataGridView_TO_PLC2.PLC_address = value; }
         [Description("表格列显示的名称--对应表格列"), Category("PLC-控件参数")]
         public string[] DataGridView_Name { get => this.daDataGridView_TO_PLC2.DataGridView_Name; set => this.daDataGridView_TO_PLC2.DataGridView_Name = value; }
         [Description("表格列读取PLC的类型--对应表格列"), Category("PLC-控件参数")]

@@ -110,17 +110,17 @@ namespace Bottom_Control.基本控件
             this.daDataGridView_TO_PLC2.Location = new System.Drawing.Point(3, 0);
             this.daDataGridView_TO_PLC2.Name = "daDataGridView_TO_PLC2";
             this.daDataGridView_TO_PLC2.numerical = Bottom_Control.numerical_format.Signed_16_Bit;
-            this.daDataGridView_TO_PLC2.PLC_address = new double[] {
-        0D,
-        0D,
-        0D,
-        0D,
-        0D,
-        0D,
-        0D,
-        0D,
-        0D,
-        0D};
+            this.daDataGridView_TO_PLC2.PLC_address = new string[] {
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"};
             this.daDataGridView_TO_PLC2.PLC_Address = "0";
             this.daDataGridView_TO_PLC2.PLC_Contact = "D";
             this.daDataGridView_TO_PLC2.PLC_Enable = false;
