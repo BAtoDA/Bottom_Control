@@ -49,7 +49,7 @@ namespace Bottom_Control.控件类基
         /// <summary>
         /// 默认柱形图小标题显示数据的地址
         /// </summary>
-        double[] Total_address { get; set; }
+        string[] Total_address { get; set; }
         /// <summary>
         /// 默认标题数据类型
         /// </summary>

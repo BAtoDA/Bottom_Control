@@ -133,7 +133,7 @@ namespace Bottom_Control.基本控件
         [Description("默认图标显示的名称"), Category("PLC-控件参数")]
         public string Histogram_Chart_Text { get; set; } = "数据表";
         [Description("默认显示的文本字体"), Category("PLC-控件参数")]
-        public Font Histogram_Chart_Font { get; set; } = new Font("微软雅黑", 15, FontStyle.Bold);
+        public Font Histogram_Chart_Font { get; set; } = new Font("微软雅黑", 12, FontStyle.Bold);
         [Description("设置字体颜色"), Category("PLC-控件参数")]
         public Color Font_Color { get; set; } = Color.DarkCyan;
         [Description("设置默认颜色为透明"), Category("PLC-控件参数")]
@@ -141,7 +141,7 @@ namespace Bottom_Control.基本控件
         [Description("默认柱形图小标题名称"), Category("PLC-控件参数")]
         public string[] Headline { get; set; } = new string[10];
         [Description("默认柱形图小标题显示数据的地址"), Category("PLC-控件参数")]
-        public double[] Total_address { get; set; } = new double[10];
+        public string[] Total_address { get; set; } = new string[10];
         [Description("默认标题数据类型"), Category("PLC-控件参数")]
         public numerical_format[] Histogram_numerical { get; set; } = new numerical_format[10];
 
@@ -215,14 +215,19 @@ namespace Bottom_Control.基本控件
             this.Titles.Clear();
             this.InitializeLifetimeService();
             this.Titles.Add(Histogram_Chart_Name ?? "数据分析图");//标题
+            this.Titles[0].Text = Histogram_Chart_Name;
+            this.Titles[0].ForeColor = Font_Color;
+            this.Titles[0].Font = Histogram_Chart_Font;
+            this.Titles[0].Alignment = ContentAlignment.TopCenter;
             //动态添加小标题
-            for (int i = 0; i < Headline.Length; i++)
+            for (int i = 0; i < TitlesData.Count; i++)
             {
-                this.Titles[i].Text = Histogram_Chart_Text;
-                this.Titles[i].ForeColor = Font_Color;
-                this.Titles[i].Font = Histogram_Chart_Font;
-                this.Titles[i].Alignment = ContentAlignment.TopCenter;
-                this.Titles.Add(Headline[i]+ TitlesData[i] ?? "20");//合格总数量
+                this.Titles.Add(Headline[i].Trim() + TitlesData[i] ?? "20"); ;
+                //this.Titles[i].Text = Histogram_Chart_Text;
+                this.Titles[i+1].ForeColor = Font_Color;
+                this.Titles[i+1].Font = new Font("微软雅黑", 10, FontStyle.Bold);
+                this.Titles[i+1].Alignment = ContentAlignment.TopRight;
+
             }
             //控件背景
             this.BackColor = background_colo;

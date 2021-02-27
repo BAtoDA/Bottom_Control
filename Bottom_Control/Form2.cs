@@ -22,5 +22,19 @@ namespace Bottom_Control
             this.plC_Open_Time1.Enabled = true;
             this.plC_Open_Time1.Start();
         }
+
+        private void oscillogram_PLC1_PaddingChanged(object sender, EventArgs e)
+        {
+            MessageBox.Show("dd");
+        }
+
+        private void oscillogram_PLC1_MarginChanged(object sender, EventArgs e)
+        {
+            MessageBox.Show("dd");
+        }
+
+        private void oscillogram_PLC1_ParentChanged(object sender, EventArgs e)
+        {
+        }
     }
 }

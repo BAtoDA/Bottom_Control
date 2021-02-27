@@ -131,9 +131,9 @@ namespace Bottom_Control.基本控件
         [Description("默认显示的文本字体"), Category("PLC-控件参数")]
         public Font doughnut_Chart_Font { get; set; } = new Font("宋体", 9);
         [Description("设置字体颜色"), Category("PLC-控件参数")]
-        public Color color { get; set; }
+        public Color color { get; set; } = Color.White;
         [Description("设置默认颜色为透明"), Category("PLC-控件参数")]
-        public Color background_colo { get; set; }
+        public Color background_colo { get; set; } = Color.Transparent;
 
         /// <summary>
         /// PLC通讯对象

@@ -163,7 +163,7 @@ namespace Bottom_Control
             if (!plc_Enable) return;//用户不开启PLC功能
             lock (this)
             {
-                this.BeginInvoke((MethodInvoker)delegate
+                this.BeginInvoke((EventHandler)delegate
                 {
                     plc.Refresh(this, this.Plc);
                 });

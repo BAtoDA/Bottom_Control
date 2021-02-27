@@ -100,7 +100,7 @@ namespace Bottom_Control.基本控件
         [Description("设置访问PLC小数点以下几位"), Category("PLC-控件参数")]
         [DefaultValue(typeof(int), "0")]
         public int Decimal_Below { get; set; } = 0;
-        public string Control_Text { get => this.Text; set => this.Text = value; }
+        public string Control_Text { get; set; } = "00";
         /// <summary>
         /// 定时刷新 定时器
         /// </summary>
@@ -153,7 +153,7 @@ namespace Bottom_Control.基本控件
         /// <summary>
         /// 每次删除增加几个点
         /// </summary>
-        private int num = 5;//每次删除增加几个点
+        private int num = 2;//每次删除增加几个点
         /// <summary>
         /// PLC通讯对象
         /// </summary>
@@ -165,8 +165,6 @@ namespace Bottom_Control.基本控件
         public Oscillogram_PLC()
         {
             pLC = new TextBox_PLC();
-            PLC_time.Start();
-            PLC_time.Tick += new EventHandler(Time_tick);
         }
         protected override void Dispose(bool disposing)//释放托管资源
         {
@@ -177,12 +175,14 @@ namespace Bottom_Control.基本控件
         /// 重写事件UI控件绘制事
         /// </summary>
         /// <param name="levent"></param>
-        protected override void OnLayout(LayoutEventArgs levent)
+        protected override void OnParentChanged(EventArgs e)
         {
+            base.OnParentChanged(e);
+            PLC_time.Start();
+            PLC_time.Tick += new EventHandler(Time_tick);
             if (this.ChartAreas.Count > 0)
                 return;
             InitChart_load();
-            base.OnLayout(levent);
         }
         /// <summary>
         /// 定时器到达事件
@@ -192,7 +192,8 @@ namespace Bottom_Control.基本控件
         private void Time_tick(object send, EventArgs e)
         {
             if (!plc_Enable) return;//用户不开启PLC功能
-            oscillogram_Chart_Tick(Convert.ToInt32(pLC.plc(this)??"00"));
+            pLC.Refresh(this);
+            oscillogram_Chart_Tick(Convert.ToInt32(this.Control_Text??"00"));
         }
         /// <summary>
         /// 初始化图表
