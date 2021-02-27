@@ -30,117 +30,117 @@ namespace Bottom_Control
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint1 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 50D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint2 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(2D, 58.682408883346518D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint3 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(3D, 50D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint4 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(4D, 58.682408883346518D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint5 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(5D, 50D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint6 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(6D, 58.682408883346518D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint7 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(7D, 50D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint8 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(8D, 58.682408883346518D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint9 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(9D, 50D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint10 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(10D, 58.682408883346518D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint11 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(11D, 50D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint12 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(12D, 58.682408883346518D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint13 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(13D, 50D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint14 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(14D, 58.682408883346518D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint15 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(15D, 50D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint16 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(16D, 58.682408883346518D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint17 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(17D, 50D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint18 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(18D, 58.682408883346518D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint19 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(19D, 50D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint20 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(20D, 58.682408883346518D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint21 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(21D, 50D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint22 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(22D, 58.682408883346518D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint23 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(23D, 50D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint24 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(24D, 58.682408883346518D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint25 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(25D, 50D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint26 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(26D, 58.682408883346518D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint27 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(27D, 50D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint28 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(28D, 58.682408883346518D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint29 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(29D, 50D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint30 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(30D, 58.682408883346518D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint31 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(31D, 50D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint32 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(32D, 58.682408883346518D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint33 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(33D, 50D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint34 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(34D, 58.682408883346518D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint35 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(35D, 50D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint36 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(36D, 58.682408883346518D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint37 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(37D, 50D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint38 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(38D, 58.682408883346518D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint39 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(39D, 50D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint40 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(40D, 58.682408883346518D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint41 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(41D, 50D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint42 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(42D, 58.682408883346518D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint43 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(43D, 50D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint44 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(44D, 58.682408883346518D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint45 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(45D, 50D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint46 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(46D, 58.682408883346518D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint47 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(47D, 50D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint48 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(48D, 58.682408883346518D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint49 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(49D, 50D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint50 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(50D, 58.682408883346518D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint51 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(51D, 50D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint52 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(52D, 58.682408883346518D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint53 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(53D, 50D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint54 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(54D, 58.682408883346518D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint55 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(55D, 50D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint56 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(56D, 58.682408883346518D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint57 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(57D, 50D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint58 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(58D, 58.682408883346518D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint59 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(59D, 50D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint60 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(60D, 58.682408883346518D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint61 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(61D, 50D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint62 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(62D, 58.682408883346518D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint63 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(63D, 50D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint64 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(64D, 58.682408883346518D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint65 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(65D, 50D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint66 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(66D, 58.682408883346518D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint67 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(67D, 50D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint68 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(68D, 58.682408883346518D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint69 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(69D, 50D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint70 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(70D, 58.682408883346518D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint71 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(71D, 50D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint72 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(72D, 58.682408883346518D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint73 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(73D, 50D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint74 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(74D, 58.682408883346518D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint75 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(75D, 50D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint76 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(76D, 58.682408883346518D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint77 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(77D, 50D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint78 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(78D, 58.682408883346518D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint79 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(79D, 50D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint80 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(80D, 58.682408883346518D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint81 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(81D, 50D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint82 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(82D, 58.682408883346518D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint83 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(83D, 50D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint84 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(84D, 58.682408883346518D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint85 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(85D, 50D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint86 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(86D, 58.682408883346518D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint87 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(87D, 50D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint88 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(88D, 58.682408883346518D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint89 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(89D, 50D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint90 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(90D, 58.682408883346518D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint91 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(91D, 50D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint92 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(92D, 58.682408883346518D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint93 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(93D, 50D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint94 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(94D, 58.682408883346518D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint95 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(95D, 50D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint96 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(96D, 58.682408883346518D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint97 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(97D, 50D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint98 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(98D, 58.682408883346518D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint99 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(99D, 50D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint100 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(100D, 58.682408883346518D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint101 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(101D, 50D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint102 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(102D, 58.682408883346518D);
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint103 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 50D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint104 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(2D, 58.682408883346518D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint105 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(3D, 50D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint106 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(4D, 58.682408883346518D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint107 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(5D, 50D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint108 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(6D, 58.682408883346518D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint109 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(7D, 50D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint110 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(8D, 58.682408883346518D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint111 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(9D, 50D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint112 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(10D, 58.682408883346518D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint113 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(11D, 50D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint114 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(12D, 58.682408883346518D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint115 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(13D, 50D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint116 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(14D, 58.682408883346518D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint117 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(15D, 50D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint118 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(16D, 58.682408883346518D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint119 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(17D, 50D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint120 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(18D, 58.682408883346518D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint121 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(19D, 50D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint122 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(20D, 58.682408883346518D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint123 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(21D, 50D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint124 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(22D, 58.682408883346518D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint125 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(23D, 50D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint126 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(24D, 58.682408883346518D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint127 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(25D, 50D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint128 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(26D, 58.682408883346518D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint129 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(27D, 50D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint130 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(28D, 58.682408883346518D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint131 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(29D, 50D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint132 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(30D, 58.682408883346518D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint133 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(31D, 50D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint134 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(32D, 58.682408883346518D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint135 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(33D, 50D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint136 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(34D, 58.682408883346518D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint137 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(35D, 50D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint138 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(36D, 58.682408883346518D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint139 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(37D, 50D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint140 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(38D, 58.682408883346518D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint141 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(39D, 50D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint142 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(40D, 58.682408883346518D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint143 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(41D, 50D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint144 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(42D, 58.682408883346518D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint145 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(43D, 50D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint146 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(44D, 58.682408883346518D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint147 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(45D, 50D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint148 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(46D, 58.682408883346518D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint149 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(47D, 50D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint150 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(48D, 58.682408883346518D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint151 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(49D, 50D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint152 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(50D, 58.682408883346518D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint153 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(51D, 50D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint154 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(52D, 58.682408883346518D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint155 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(53D, 50D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint156 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(54D, 58.682408883346518D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint157 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(55D, 50D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint158 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(56D, 58.682408883346518D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint159 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(57D, 50D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint160 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(58D, 58.682408883346518D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint161 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(59D, 50D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint162 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(60D, 58.682408883346518D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint163 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(61D, 50D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint164 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(62D, 58.682408883346518D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint165 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(63D, 50D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint166 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(64D, 58.682408883346518D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint167 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(65D, 50D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint168 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(66D, 58.682408883346518D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint169 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(67D, 50D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint170 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(68D, 58.682408883346518D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint171 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(69D, 50D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint172 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(70D, 58.682408883346518D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint173 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(71D, 50D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint174 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(72D, 58.682408883346518D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint175 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(73D, 50D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint176 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(74D, 58.682408883346518D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint177 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(75D, 50D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint178 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(76D, 58.682408883346518D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint179 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(77D, 50D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint180 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(78D, 58.682408883346518D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint181 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(79D, 50D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint182 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(80D, 58.682408883346518D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint183 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(81D, 50D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint184 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(82D, 58.682408883346518D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint185 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(83D, 50D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint186 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(84D, 58.682408883346518D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint187 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(85D, 50D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint188 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(86D, 58.682408883346518D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint189 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(87D, 50D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint190 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(88D, 58.682408883346518D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint191 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(89D, 50D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint192 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(90D, 58.682408883346518D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint193 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(91D, 50D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint194 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(92D, 58.682408883346518D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint195 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(93D, 50D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint196 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(94D, 58.682408883346518D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint197 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(95D, 50D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint198 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(96D, 58.682408883346518D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint199 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(97D, 50D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint200 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(98D, 58.682408883346518D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint201 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(99D, 50D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint202 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(100D, 58.682408883346518D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint203 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(101D, 50D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint204 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(102D, 58.682408883346518D);
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.daButton14 = new Bottom_Control.DAButton();
             this.daButton13 = new Bottom_Control.DAButton();
@@ -154,18 +154,18 @@ namespace Bottom_Control
             this.daButton5 = new Bottom_Control.DAButton();
             this.daButton4 = new Bottom_Control.DAButton();
             this.daButton3 = new Bottom_Control.DAButton();
-            this.ihatetheqrcodeSQL1 = new Bottom_Control.基本控件.IhatetheqrcodeSQL();
-            this.oscillogram_PLC1 = new Bottom_Control.基本控件.Oscillogram_PLC();
-            this.histogram_PLC1 = new Bottom_Control.基本控件.Histogram_PLC();
-            this.doughnut_PLC1 = new Bottom_Control.基本控件.Doughnut_PLC();
             this.daButton2 = new Bottom_Control.DAButton();
             this.daButton1 = new Bottom_Control.DAButton();
-            this.daIhatetheqrcode_PLC1 = new Bottom_Control.基本控件.DAIhatetheqrcode_PLC();
             this.daSwitch1 = new Bottom_Control.基本控件.DASwitch();
-            this.plC_Open_Time1 = new Bottom_Control.设置控件.PLC_Open_Time();
+            this.oscillogram_PLC1 = new Bottom_Control.基本控件.Oscillogram_PLC();
+            this.doughnut_PLC1 = new Bottom_Control.基本控件.Doughnut_PLC();
+            this.histogram_PLC1 = new Bottom_Control.基本控件.Histogram_PLC();
+            this.daIhatetheqrcode_PLC1 = new Bottom_Control.基本控件.DAIhatetheqrcode_PLC();
+            this.ihatetheqrcodeSQL1 = new Bottom_Control.基本控件.IhatetheqrcodeSQL();
+            this.daAnalogMeter1 = new Bottom_Control.基本控件.DAAnalogMeter();
             ((System.ComponentModel.ISupportInitialize)(this.oscillogram_PLC1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.histogram_PLC1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.doughnut_PLC1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.histogram_PLC1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.daIhatetheqrcode_PLC1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -421,19 +421,69 @@ namespace Bottom_Control
             this.daButton3.Text = "daButton3";
             this.daButton3.UseVisualStyleBackColor = false;
             // 
-            // ihatetheqrcodeSQL1
+            // daButton2
             // 
-            this.ihatetheqrcodeSQL1.Column_Name = "ID";
-            this.ihatetheqrcodeSQL1.Location = new System.Drawing.Point(797, 12);
-            this.ihatetheqrcodeSQL1.Name = "ihatetheqrcodeSQL1";
-            this.ihatetheqrcodeSQL1.select = false;
-            this.ihatetheqrcodeSQL1.Size = new System.Drawing.Size(337, 450);
-            this.ihatetheqrcodeSQL1.SQL_Enable = true;
-            this.ihatetheqrcodeSQL1.SqlString = "data source=DESKTOP-955LB02\\SQLEXPRESS;initial catalog=XN;persist security info=T" +
-    "rue;user id=sa;password=3131458;MultipleActiveResultSets=True;App=EntityFramewor" +
-    "k";
-            this.ihatetheqrcodeSQL1.SqlSurface_Name = "Table_1";
-            this.ihatetheqrcodeSQL1.TabIndex = 8;
+            this.daButton2.BackColor = System.Drawing.Color.Transparent;
+            this.daButton2.Backdrop_OFF = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(131)))), ((int)(((byte)(229)))));
+            this.daButton2.Backdrop_ON = System.Drawing.Color.Lime;
+            this.daButton2.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.daButton2.DownBack = null;
+            this.daButton2.Location = new System.Drawing.Point(152, 120);
+            this.daButton2.MouseBack = null;
+            this.daButton2.Name = "daButton2";
+            this.daButton2.NormlBack = null;
+            this.daButton2.Pattern = Bottom_Control.Button_pattern.selector_witch;
+            this.daButton2.Plc = Bottom_Control.PLC.Siemens;
+            this.daButton2.PLC_Address = "1.3";
+            this.daButton2.PLC_Contact = "M";
+            this.daButton2.PLC_Enable = true;
+            this.daButton2.Size = new System.Drawing.Size(83, 37);
+            this.daButton2.TabIndex = 3;
+            this.daButton2.Text = "daButton2";
+            this.daButton2.UseVisualStyleBackColor = false;
+            // 
+            // daButton1
+            // 
+            this.daButton1.BackColor = System.Drawing.Color.Transparent;
+            this.daButton1.Backdrop_OFF = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(131)))), ((int)(((byte)(229)))));
+            this.daButton1.Backdrop_ON = System.Drawing.Color.Lime;
+            this.daButton1.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.daButton1.DownBack = null;
+            this.daButton1.Location = new System.Drawing.Point(29, 34);
+            this.daButton1.MouseBack = null;
+            this.daButton1.Name = "daButton1";
+            this.daButton1.NormlBack = null;
+            this.daButton1.Pattern = Bottom_Control.Button_pattern.selector_witch;
+            this.daButton1.Plc = Bottom_Control.PLC.Siemens;
+            this.daButton1.PLC_Address = "1.2";
+            this.daButton1.PLC_Contact = "M";
+            this.daButton1.PLC_Enable = true;
+            this.daButton1.Size = new System.Drawing.Size(83, 37);
+            this.daButton1.TabIndex = 2;
+            this.daButton1.Text = "daButton1";
+            this.daButton1.UseVisualStyleBackColor = false;
+            // 
+            // daSwitch1
+            // 
+            this.daSwitch1.BackColor = System.Drawing.Color.Transparent;
+            this.daSwitch1.Backdrop_OFF = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(131)))), ((int)(((byte)(229)))));
+            this.daSwitch1.Backdrop_ON = System.Drawing.Color.Lime;
+            this.daSwitch1.Checked = false;
+            this.daSwitch1.FalseColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(189)))), ((int)(((byte)(189)))));
+            this.daSwitch1.FalseTextColr = System.Drawing.Color.White;
+            this.daSwitch1.Location = new System.Drawing.Point(152, 335);
+            this.daSwitch1.Name = "daSwitch1";
+            this.daSwitch1.Pattern = Bottom_Control.Button_pattern.selector_witch;
+            this.daSwitch1.Plc = Bottom_Control.PLC.Siemens;
+            this.daSwitch1.PLC_Address = "0.0";
+            this.daSwitch1.PLC_Contact = "Q";
+            this.daSwitch1.PLC_Enable = true;
+            this.daSwitch1.Size = new System.Drawing.Size(83, 31);
+            this.daSwitch1.SwitchType = HZH_Controls.Controls.SwitchType.Ellipse;
+            this.daSwitch1.TabIndex = 0;
+            this.daSwitch1.Texts = null;
+            this.daSwitch1.TrueColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(59)))));
+            this.daSwitch1.TrueTextColr = System.Drawing.Color.White;
             // 
             // oscillogram_PLC1
             // 
@@ -441,142 +491,200 @@ namespace Bottom_Control
             this.oscillogram_PLC1.Chart_Interval = 5;
             this.oscillogram_PLC1.Chart_Maximum = 100;
             this.oscillogram_PLC1.Chart_Minimum = 0;
-            chartArea1.Name = "ChartArea1";
-            this.oscillogram_PLC1.ChartAreas.Add(chartArea1);
+            chartArea4.Name = "ChartArea1";
+            this.oscillogram_PLC1.ChartAreas.Add(chartArea4);
             this.oscillogram_PLC1.color = System.Drawing.Color.Red;
             this.oscillogram_PLC1.Control_Text = "00";
             this.oscillogram_PLC1.Font_Color = System.Drawing.Color.DarkCyan;
             this.oscillogram_PLC1.Histogram_Chart_Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Bold);
             this.oscillogram_PLC1.Histogram_Chart_Name = "数据分析图";
             this.oscillogram_PLC1.Histogram_Chart_Text = "数据表";
-            legend1.Name = "Legend1";
-            this.oscillogram_PLC1.Legends.Add(legend1);
+            legend4.Name = "Legend1";
+            this.oscillogram_PLC1.Legends.Add(legend4);
             this.oscillogram_PLC1.Location = new System.Drawing.Point(12, 372);
             this.oscillogram_PLC1.Name = "oscillogram_PLC1";
             this.oscillogram_PLC1.Plc = Bottom_Control.PLC.Siemens;
             this.oscillogram_PLC1.PLC_Address = "1.50";
             this.oscillogram_PLC1.PLC_Contact = "DB";
             this.oscillogram_PLC1.PLC_Enable = true;
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            series1.Points.Add(dataPoint1);
-            series1.Points.Add(dataPoint2);
-            series1.Points.Add(dataPoint3);
-            series1.Points.Add(dataPoint4);
-            series1.Points.Add(dataPoint5);
-            series1.Points.Add(dataPoint6);
-            series1.Points.Add(dataPoint7);
-            series1.Points.Add(dataPoint8);
-            series1.Points.Add(dataPoint9);
-            series1.Points.Add(dataPoint10);
-            series1.Points.Add(dataPoint11);
-            series1.Points.Add(dataPoint12);
-            series1.Points.Add(dataPoint13);
-            series1.Points.Add(dataPoint14);
-            series1.Points.Add(dataPoint15);
-            series1.Points.Add(dataPoint16);
-            series1.Points.Add(dataPoint17);
-            series1.Points.Add(dataPoint18);
-            series1.Points.Add(dataPoint19);
-            series1.Points.Add(dataPoint20);
-            series1.Points.Add(dataPoint21);
-            series1.Points.Add(dataPoint22);
-            series1.Points.Add(dataPoint23);
-            series1.Points.Add(dataPoint24);
-            series1.Points.Add(dataPoint25);
-            series1.Points.Add(dataPoint26);
-            series1.Points.Add(dataPoint27);
-            series1.Points.Add(dataPoint28);
-            series1.Points.Add(dataPoint29);
-            series1.Points.Add(dataPoint30);
-            series1.Points.Add(dataPoint31);
-            series1.Points.Add(dataPoint32);
-            series1.Points.Add(dataPoint33);
-            series1.Points.Add(dataPoint34);
-            series1.Points.Add(dataPoint35);
-            series1.Points.Add(dataPoint36);
-            series1.Points.Add(dataPoint37);
-            series1.Points.Add(dataPoint38);
-            series1.Points.Add(dataPoint39);
-            series1.Points.Add(dataPoint40);
-            series1.Points.Add(dataPoint41);
-            series1.Points.Add(dataPoint42);
-            series1.Points.Add(dataPoint43);
-            series1.Points.Add(dataPoint44);
-            series1.Points.Add(dataPoint45);
-            series1.Points.Add(dataPoint46);
-            series1.Points.Add(dataPoint47);
-            series1.Points.Add(dataPoint48);
-            series1.Points.Add(dataPoint49);
-            series1.Points.Add(dataPoint50);
-            series1.Points.Add(dataPoint51);
-            series1.Points.Add(dataPoint52);
-            series1.Points.Add(dataPoint53);
-            series1.Points.Add(dataPoint54);
-            series1.Points.Add(dataPoint55);
-            series1.Points.Add(dataPoint56);
-            series1.Points.Add(dataPoint57);
-            series1.Points.Add(dataPoint58);
-            series1.Points.Add(dataPoint59);
-            series1.Points.Add(dataPoint60);
-            series1.Points.Add(dataPoint61);
-            series1.Points.Add(dataPoint62);
-            series1.Points.Add(dataPoint63);
-            series1.Points.Add(dataPoint64);
-            series1.Points.Add(dataPoint65);
-            series1.Points.Add(dataPoint66);
-            series1.Points.Add(dataPoint67);
-            series1.Points.Add(dataPoint68);
-            series1.Points.Add(dataPoint69);
-            series1.Points.Add(dataPoint70);
-            series1.Points.Add(dataPoint71);
-            series1.Points.Add(dataPoint72);
-            series1.Points.Add(dataPoint73);
-            series1.Points.Add(dataPoint74);
-            series1.Points.Add(dataPoint75);
-            series1.Points.Add(dataPoint76);
-            series1.Points.Add(dataPoint77);
-            series1.Points.Add(dataPoint78);
-            series1.Points.Add(dataPoint79);
-            series1.Points.Add(dataPoint80);
-            series1.Points.Add(dataPoint81);
-            series1.Points.Add(dataPoint82);
-            series1.Points.Add(dataPoint83);
-            series1.Points.Add(dataPoint84);
-            series1.Points.Add(dataPoint85);
-            series1.Points.Add(dataPoint86);
-            series1.Points.Add(dataPoint87);
-            series1.Points.Add(dataPoint88);
-            series1.Points.Add(dataPoint89);
-            series1.Points.Add(dataPoint90);
-            series1.Points.Add(dataPoint91);
-            series1.Points.Add(dataPoint92);
-            series1.Points.Add(dataPoint93);
-            series1.Points.Add(dataPoint94);
-            series1.Points.Add(dataPoint95);
-            series1.Points.Add(dataPoint96);
-            series1.Points.Add(dataPoint97);
-            series1.Points.Add(dataPoint98);
-            series1.Points.Add(dataPoint99);
-            series1.Points.Add(dataPoint100);
-            series1.Points.Add(dataPoint101);
-            series1.Points.Add(dataPoint102);
-            this.oscillogram_PLC1.Series.Add(series1);
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            series4.Points.Add(dataPoint103);
+            series4.Points.Add(dataPoint104);
+            series4.Points.Add(dataPoint105);
+            series4.Points.Add(dataPoint106);
+            series4.Points.Add(dataPoint107);
+            series4.Points.Add(dataPoint108);
+            series4.Points.Add(dataPoint109);
+            series4.Points.Add(dataPoint110);
+            series4.Points.Add(dataPoint111);
+            series4.Points.Add(dataPoint112);
+            series4.Points.Add(dataPoint113);
+            series4.Points.Add(dataPoint114);
+            series4.Points.Add(dataPoint115);
+            series4.Points.Add(dataPoint116);
+            series4.Points.Add(dataPoint117);
+            series4.Points.Add(dataPoint118);
+            series4.Points.Add(dataPoint119);
+            series4.Points.Add(dataPoint120);
+            series4.Points.Add(dataPoint121);
+            series4.Points.Add(dataPoint122);
+            series4.Points.Add(dataPoint123);
+            series4.Points.Add(dataPoint124);
+            series4.Points.Add(dataPoint125);
+            series4.Points.Add(dataPoint126);
+            series4.Points.Add(dataPoint127);
+            series4.Points.Add(dataPoint128);
+            series4.Points.Add(dataPoint129);
+            series4.Points.Add(dataPoint130);
+            series4.Points.Add(dataPoint131);
+            series4.Points.Add(dataPoint132);
+            series4.Points.Add(dataPoint133);
+            series4.Points.Add(dataPoint134);
+            series4.Points.Add(dataPoint135);
+            series4.Points.Add(dataPoint136);
+            series4.Points.Add(dataPoint137);
+            series4.Points.Add(dataPoint138);
+            series4.Points.Add(dataPoint139);
+            series4.Points.Add(dataPoint140);
+            series4.Points.Add(dataPoint141);
+            series4.Points.Add(dataPoint142);
+            series4.Points.Add(dataPoint143);
+            series4.Points.Add(dataPoint144);
+            series4.Points.Add(dataPoint145);
+            series4.Points.Add(dataPoint146);
+            series4.Points.Add(dataPoint147);
+            series4.Points.Add(dataPoint148);
+            series4.Points.Add(dataPoint149);
+            series4.Points.Add(dataPoint150);
+            series4.Points.Add(dataPoint151);
+            series4.Points.Add(dataPoint152);
+            series4.Points.Add(dataPoint153);
+            series4.Points.Add(dataPoint154);
+            series4.Points.Add(dataPoint155);
+            series4.Points.Add(dataPoint156);
+            series4.Points.Add(dataPoint157);
+            series4.Points.Add(dataPoint158);
+            series4.Points.Add(dataPoint159);
+            series4.Points.Add(dataPoint160);
+            series4.Points.Add(dataPoint161);
+            series4.Points.Add(dataPoint162);
+            series4.Points.Add(dataPoint163);
+            series4.Points.Add(dataPoint164);
+            series4.Points.Add(dataPoint165);
+            series4.Points.Add(dataPoint166);
+            series4.Points.Add(dataPoint167);
+            series4.Points.Add(dataPoint168);
+            series4.Points.Add(dataPoint169);
+            series4.Points.Add(dataPoint170);
+            series4.Points.Add(dataPoint171);
+            series4.Points.Add(dataPoint172);
+            series4.Points.Add(dataPoint173);
+            series4.Points.Add(dataPoint174);
+            series4.Points.Add(dataPoint175);
+            series4.Points.Add(dataPoint176);
+            series4.Points.Add(dataPoint177);
+            series4.Points.Add(dataPoint178);
+            series4.Points.Add(dataPoint179);
+            series4.Points.Add(dataPoint180);
+            series4.Points.Add(dataPoint181);
+            series4.Points.Add(dataPoint182);
+            series4.Points.Add(dataPoint183);
+            series4.Points.Add(dataPoint184);
+            series4.Points.Add(dataPoint185);
+            series4.Points.Add(dataPoint186);
+            series4.Points.Add(dataPoint187);
+            series4.Points.Add(dataPoint188);
+            series4.Points.Add(dataPoint189);
+            series4.Points.Add(dataPoint190);
+            series4.Points.Add(dataPoint191);
+            series4.Points.Add(dataPoint192);
+            series4.Points.Add(dataPoint193);
+            series4.Points.Add(dataPoint194);
+            series4.Points.Add(dataPoint195);
+            series4.Points.Add(dataPoint196);
+            series4.Points.Add(dataPoint197);
+            series4.Points.Add(dataPoint198);
+            series4.Points.Add(dataPoint199);
+            series4.Points.Add(dataPoint200);
+            series4.Points.Add(dataPoint201);
+            series4.Points.Add(dataPoint202);
+            series4.Points.Add(dataPoint203);
+            series4.Points.Add(dataPoint204);
+            this.oscillogram_PLC1.Series.Add(series4);
             this.oscillogram_PLC1.Size = new System.Drawing.Size(340, 153);
             this.oscillogram_PLC1.TabIndex = 7;
             this.oscillogram_PLC1.Text = "oscillogram_PLC1";
             this.oscillogram_PLC1.waveform_ON = true;
-            this.oscillogram_PLC1.MarginChanged += new System.EventHandler(this.oscillogram_PLC1_MarginChanged);
-            this.oscillogram_PLC1.PaddingChanged += new System.EventHandler(this.oscillogram_PLC1_PaddingChanged);
-            this.oscillogram_PLC1.ParentChanged += new System.EventHandler(this.oscillogram_PLC1_ParentChanged);
+            // 
+            // doughnut_PLC1
+            // 
+            this.doughnut_PLC1.background_colo = System.Drawing.Color.Transparent;
+            chartArea5.Name = "ChartArea1";
+            this.doughnut_PLC1.ChartAreas.Add(chartArea5);
+            this.doughnut_PLC1.color = System.Drawing.Color.White;
+            this.doughnut_PLC1.Control_Text = "doughnut_PLC1";
+            this.doughnut_PLC1.DataGridView_Name = new string[] {
+        "PLC1",
+        "P21",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null};
+            this.doughnut_PLC1.DataGridView_numerical = new Bottom_Control.numerical_format[] {
+        Bottom_Control.numerical_format.Signed_16_Bit,
+        Bottom_Control.numerical_format.Signed_16_Bit,
+        Bottom_Control.numerical_format.BCD_16_Bit,
+        Bottom_Control.numerical_format.BCD_16_Bit,
+        Bottom_Control.numerical_format.BCD_16_Bit,
+        Bottom_Control.numerical_format.BCD_16_Bit,
+        Bottom_Control.numerical_format.BCD_16_Bit,
+        Bottom_Control.numerical_format.BCD_16_Bit,
+        Bottom_Control.numerical_format.BCD_16_Bit,
+        Bottom_Control.numerical_format.BCD_16_Bit};
+            this.doughnut_PLC1.DataGridViewPLC_Time = false;
+            this.doughnut_PLC1.doughnut_Chart_Font = new System.Drawing.Font("宋体", 9F);
+            this.doughnut_PLC1.doughnut_Chart_Name = "Chart1";
+            this.doughnut_PLC1.doughnut_Chart_Text = "Chart_Text";
+            legend5.Name = "Legend1";
+            this.doughnut_PLC1.Legends.Add(legend5);
+            this.doughnut_PLC1.Location = new System.Drawing.Point(299, 12);
+            this.doughnut_PLC1.Name = "doughnut_PLC1";
+            this.doughnut_PLC1.numerical = Bottom_Control.numerical_format.Signed_16_Bit;
+            this.doughnut_PLC1.Plc = Bottom_Control.PLC.Siemens;
+            this.doughnut_PLC1.PLC_address = new string[] {
+        "1.50",
+        "1.50",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"};
+            this.doughnut_PLC1.PLC_Address = "0";
+            this.doughnut_PLC1.PLC_Contact = "DB";
+            this.doughnut_PLC1.PLC_Enable = true;
+            series5.ChartArea = "ChartArea1";
+            series5.Legend = "Legend1";
+            series5.Name = "Series1";
+            this.doughnut_PLC1.Series.Add(series5);
+            this.doughnut_PLC1.Size = new System.Drawing.Size(300, 153);
+            this.doughnut_PLC1.TabIndex = 5;
+            this.doughnut_PLC1.Text = "doughnut_PLC1";
             // 
             // histogram_PLC1
             // 
             this.histogram_PLC1.background_colo = System.Drawing.Color.Empty;
             this.histogram_PLC1.Background_colo = System.Drawing.Color.Transparent;
-            chartArea2.Name = "ChartArea1";
-            this.histogram_PLC1.ChartAreas.Add(chartArea2);
+            chartArea6.Name = "ChartArea1";
+            this.histogram_PLC1.ChartAreas.Add(chartArea6);
             this.histogram_PLC1.color = System.Drawing.Color.Empty;
             this.histogram_PLC1.Control_Text = "histogram_PLC1";
             this.histogram_PLC1.DataGridView_Name = new string[] {
@@ -631,8 +739,8 @@ namespace Bottom_Control
         Bottom_Control.numerical_format.BCD_16_Bit,
         Bottom_Control.numerical_format.BCD_16_Bit,
         Bottom_Control.numerical_format.BCD_16_Bit};
-            legend2.Name = "Legend1";
-            this.histogram_PLC1.Legends.Add(legend2);
+            legend6.Name = "Legend1";
+            this.histogram_PLC1.Legends.Add(legend6);
             this.histogram_PLC1.Location = new System.Drawing.Point(299, 171);
             this.histogram_PLC1.Name = "histogram_PLC1";
             this.histogram_PLC1.numerical = Bottom_Control.numerical_format.Signed_16_Bit;
@@ -651,10 +759,10 @@ namespace Bottom_Control
             this.histogram_PLC1.PLC_Address = "0";
             this.histogram_PLC1.PLC_Contact = "DB";
             this.histogram_PLC1.PLC_Enable = true;
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.histogram_PLC1.Series.Add(series2);
+            series6.ChartArea = "ChartArea1";
+            series6.Legend = "Legend1";
+            series6.Name = "Series1";
+            this.histogram_PLC1.Series.Add(series6);
             this.histogram_PLC1.Size = new System.Drawing.Size(489, 337);
             this.histogram_PLC1.TabIndex = 6;
             this.histogram_PLC1.Text = "histogram_PLC1";
@@ -669,109 +777,6 @@ namespace Bottom_Control
         "0",
         "0",
         "0"};
-            // 
-            // doughnut_PLC1
-            // 
-            this.doughnut_PLC1.background_colo = System.Drawing.Color.Transparent;
-            chartArea3.Name = "ChartArea1";
-            this.doughnut_PLC1.ChartAreas.Add(chartArea3);
-            this.doughnut_PLC1.color = System.Drawing.Color.White;
-            this.doughnut_PLC1.Control_Text = "doughnut_PLC1";
-            this.doughnut_PLC1.DataGridView_Name = new string[] {
-        "PLC1",
-        "P21",
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null};
-            this.doughnut_PLC1.DataGridView_numerical = new Bottom_Control.numerical_format[] {
-        Bottom_Control.numerical_format.Signed_16_Bit,
-        Bottom_Control.numerical_format.Signed_16_Bit,
-        Bottom_Control.numerical_format.BCD_16_Bit,
-        Bottom_Control.numerical_format.BCD_16_Bit,
-        Bottom_Control.numerical_format.BCD_16_Bit,
-        Bottom_Control.numerical_format.BCD_16_Bit,
-        Bottom_Control.numerical_format.BCD_16_Bit,
-        Bottom_Control.numerical_format.BCD_16_Bit,
-        Bottom_Control.numerical_format.BCD_16_Bit,
-        Bottom_Control.numerical_format.BCD_16_Bit};
-            this.doughnut_PLC1.DataGridViewPLC_Time = false;
-            this.doughnut_PLC1.doughnut_Chart_Font = new System.Drawing.Font("宋体", 9F);
-            this.doughnut_PLC1.doughnut_Chart_Name = "Chart1";
-            this.doughnut_PLC1.doughnut_Chart_Text = "Chart_Text";
-            legend3.Name = "Legend1";
-            this.doughnut_PLC1.Legends.Add(legend3);
-            this.doughnut_PLC1.Location = new System.Drawing.Point(299, 12);
-            this.doughnut_PLC1.Name = "doughnut_PLC1";
-            this.doughnut_PLC1.numerical = Bottom_Control.numerical_format.Signed_16_Bit;
-            this.doughnut_PLC1.Plc = Bottom_Control.PLC.Siemens;
-            this.doughnut_PLC1.PLC_address = new string[] {
-        "1.50",
-        "1.50",
-        "0",
-        "0",
-        "0",
-        "0",
-        "0",
-        "0",
-        "0",
-        "0"};
-            this.doughnut_PLC1.PLC_Address = "0";
-            this.doughnut_PLC1.PLC_Contact = "DB";
-            this.doughnut_PLC1.PLC_Enable = true;
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.doughnut_PLC1.Series.Add(series3);
-            this.doughnut_PLC1.Size = new System.Drawing.Size(300, 153);
-            this.doughnut_PLC1.TabIndex = 5;
-            this.doughnut_PLC1.Text = "doughnut_PLC1";
-            // 
-            // daButton2
-            // 
-            this.daButton2.BackColor = System.Drawing.Color.Transparent;
-            this.daButton2.Backdrop_OFF = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(131)))), ((int)(((byte)(229)))));
-            this.daButton2.Backdrop_ON = System.Drawing.Color.Lime;
-            this.daButton2.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.daButton2.DownBack = null;
-            this.daButton2.Location = new System.Drawing.Point(152, 120);
-            this.daButton2.MouseBack = null;
-            this.daButton2.Name = "daButton2";
-            this.daButton2.NormlBack = null;
-            this.daButton2.Pattern = Bottom_Control.Button_pattern.selector_witch;
-            this.daButton2.Plc = Bottom_Control.PLC.Siemens;
-            this.daButton2.PLC_Address = "1.3";
-            this.daButton2.PLC_Contact = "M";
-            this.daButton2.PLC_Enable = true;
-            this.daButton2.Size = new System.Drawing.Size(83, 37);
-            this.daButton2.TabIndex = 3;
-            this.daButton2.Text = "daButton2";
-            this.daButton2.UseVisualStyleBackColor = false;
-            // 
-            // daButton1
-            // 
-            this.daButton1.BackColor = System.Drawing.Color.Transparent;
-            this.daButton1.Backdrop_OFF = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(131)))), ((int)(((byte)(229)))));
-            this.daButton1.Backdrop_ON = System.Drawing.Color.Lime;
-            this.daButton1.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.daButton1.DownBack = null;
-            this.daButton1.Location = new System.Drawing.Point(29, 34);
-            this.daButton1.MouseBack = null;
-            this.daButton1.Name = "daButton1";
-            this.daButton1.NormlBack = null;
-            this.daButton1.Pattern = Bottom_Control.Button_pattern.selector_witch;
-            this.daButton1.Plc = Bottom_Control.PLC.Siemens;
-            this.daButton1.PLC_Address = "1.2";
-            this.daButton1.PLC_Contact = "M";
-            this.daButton1.PLC_Enable = true;
-            this.daButton1.Size = new System.Drawing.Size(83, 37);
-            this.daButton1.TabIndex = 2;
-            this.daButton1.Text = "daButton1";
-            this.daButton1.UseVisualStyleBackColor = false;
             // 
             // daIhatetheqrcode_PLC1
             // 
@@ -790,41 +795,50 @@ namespace Bottom_Control
             this.daIhatetheqrcode_PLC1.TabStop = false;
             this.daIhatetheqrcode_PLC1.Text = "123456789";
             // 
-            // daSwitch1
+            // ihatetheqrcodeSQL1
             // 
-            this.daSwitch1.BackColor = System.Drawing.Color.Transparent;
-            this.daSwitch1.Backdrop_OFF = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(131)))), ((int)(((byte)(229)))));
-            this.daSwitch1.Backdrop_ON = System.Drawing.Color.Lime;
-            this.daSwitch1.Checked = false;
-            this.daSwitch1.FalseColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(189)))), ((int)(((byte)(189)))));
-            this.daSwitch1.FalseTextColr = System.Drawing.Color.White;
-            this.daSwitch1.Location = new System.Drawing.Point(152, 335);
-            this.daSwitch1.Name = "daSwitch1";
-            this.daSwitch1.Pattern = Bottom_Control.Button_pattern.selector_witch;
-            this.daSwitch1.Plc = Bottom_Control.PLC.Siemens;
-            this.daSwitch1.PLC_Address = "0.0";
-            this.daSwitch1.PLC_Contact = "Q";
-            this.daSwitch1.PLC_Enable = true;
-            this.daSwitch1.Size = new System.Drawing.Size(83, 31);
-            this.daSwitch1.SwitchType = HZH_Controls.Controls.SwitchType.Ellipse;
-            this.daSwitch1.TabIndex = 0;
-            this.daSwitch1.Texts = null;
-            this.daSwitch1.TrueColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(59)))));
-            this.daSwitch1.TrueTextColr = System.Drawing.Color.White;
+            this.ihatetheqrcodeSQL1.Column_Name = "ID";
+            this.ihatetheqrcodeSQL1.Location = new System.Drawing.Point(797, 12);
+            this.ihatetheqrcodeSQL1.Name = "ihatetheqrcodeSQL1";
+            this.ihatetheqrcodeSQL1.select = false;
+            this.ihatetheqrcodeSQL1.Size = new System.Drawing.Size(337, 450);
+            this.ihatetheqrcodeSQL1.SQL_Enable = true;
+            this.ihatetheqrcodeSQL1.SqlString = "data source=DESKTOP-955LB02\\SQLEXPRESS;initial catalog=XN;persist security info=T" +
+    "rue;user id=sa;password=3131458;MultipleActiveResultSets=True;App=EntityFramewor" +
+    "k";
+            this.ihatetheqrcodeSQL1.SqlSurface_Name = "Table_1";
+            this.ihatetheqrcodeSQL1.TabIndex = 8;
             // 
-            // plC_Open_Time1
+            // daAnalogMeter1
             // 
-            this.plC_Open_Time1.Interval = 500;
-            this.plC_Open_Time1.ModBusIP = "192.168.3.20";
-            this.plC_Open_Time1.Siemens_Open = true;
-            this.plC_Open_Time1.SiemensIP = "192.168.3.2";
-            this.plC_Open_Time1.siemensPLCS = HslCommunication.Profinet.SiemensPLCS.S200Smart;
+            this.daAnalogMeter1.BackColor = System.Drawing.Color.Transparent;
+            this.daAnalogMeter1.BodyColor = System.Drawing.Color.Transparent;
+            this.daAnalogMeter1.Control_Text = "0";
+            this.daAnalogMeter1.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.daAnalogMeter1.ForeColor = System.Drawing.Color.Black;
+            this.daAnalogMeter1.Location = new System.Drawing.Point(241, 358);
+            this.daAnalogMeter1.MaxValue = 100D;
+            this.daAnalogMeter1.MinValue = 0D;
+            this.daAnalogMeter1.Name = "daAnalogMeter1";
+            this.daAnalogMeter1.NeedleColor = System.Drawing.Color.YellowGreen;
+            this.daAnalogMeter1.Plc = Bottom_Control.PLC.Siemens;
+            this.daAnalogMeter1.PLC_Address = "1.50";
+            this.daAnalogMeter1.PLC_Contact = "DB";
+            this.daAnalogMeter1.PLC_Enable = true;
+            this.daAnalogMeter1.Renderer = null;
+            this.daAnalogMeter1.ScaleColor = System.Drawing.Color.Black;
+            this.daAnalogMeter1.Size = new System.Drawing.Size(180, 180);
+            this.daAnalogMeter1.Style = Sunny.UI.UIStyle.Custom;
+            this.daAnalogMeter1.TabIndex = 21;
+            this.daAnalogMeter1.Text = "daAnalogMeter1";
+            this.daAnalogMeter1.Value = 0D;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1146, 531);
+            this.Controls.Add(this.daAnalogMeter1);
             this.Controls.Add(this.daButton14);
             this.Controls.Add(this.daButton13);
             this.Controls.Add(this.daButton12);
@@ -849,24 +863,16 @@ namespace Bottom_Control
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.oscillogram_PLC1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.histogram_PLC1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.doughnut_PLC1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.histogram_PLC1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.daIhatetheqrcode_PLC1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private 设置控件.PLC_Open_Time plC_Open_Time1;
-        private 基本控件.DASwitch daSwitch1;
-        private 基本控件.DAIhatetheqrcode_PLC daIhatetheqrcode_PLC1;
         private DAButton daButton1;
         private DAButton daButton2;
-        private 基本控件.Doughnut_PLC doughnut_PLC1;
-        private 基本控件.Histogram_PLC histogram_PLC1;
-        private 基本控件.Oscillogram_PLC oscillogram_PLC1;
-        private 基本控件.IhatetheqrcodeSQL ihatetheqrcodeSQL1;
         private DAButton daButton3;
         private DAButton daButton4;
         private DAButton daButton5;
@@ -879,5 +885,12 @@ namespace Bottom_Control
         private DAButton daButton12;
         private DAButton daButton13;
         private DAButton daButton14;
+        private 基本控件.DASwitch daSwitch1;
+        private 基本控件.Oscillogram_PLC oscillogram_PLC1;
+        private 基本控件.Doughnut_PLC doughnut_PLC1;
+        private 基本控件.Histogram_PLC histogram_PLC1;
+        private 基本控件.DAIhatetheqrcode_PLC daIhatetheqrcode_PLC1;
+        private 基本控件.IhatetheqrcodeSQL ihatetheqrcodeSQL1;
+        private 基本控件.DAAnalogMeter daAnalogMeter1;
     }
 }

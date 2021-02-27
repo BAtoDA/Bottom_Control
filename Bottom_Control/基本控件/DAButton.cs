@@ -160,7 +160,7 @@ namespace Bottom_Control
         /// <param name="e"></param>
         private void Time_tick(object send, EventArgs e)
         {
-            if (!plc_Enable) return;//用户不开启PLC功能
+            if (!plc_Enable||this.IsDisposed|| this.Created==false) return;//用户不开启PLC功能
             lock (this)
             {
                 this.BeginInvoke((EventHandler)delegate

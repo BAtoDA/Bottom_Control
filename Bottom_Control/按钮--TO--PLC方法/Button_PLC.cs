@@ -2,6 +2,7 @@
 using Bottom_Control.基本控件;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -266,7 +267,19 @@ namespace Bottom_Control.按钮__TO__PLC方法
                 case "DASignalLamp":
                     DASignalLamp daSignalLamp = button as DASignalLamp;
                     daSignalLamp.Text = button_State == Button_state.ON ? daSignalLamp.Text_ON : daSignalLamp.Text_OFF;
-                    if(daSignalLamp.O_Flicker&button_State==Button_state.Off)
+                    if(daSignalLamp.I_Flicker& daSignalLamp.O_Flicker == false&button_State == Button_state.Off)
+                    {
+                        daSignalLamp.LampColor[0] = button_State == Button_state.ON ? daSignalLamp.Backdrop_ON : daSignalLamp.Backdrop_OFF;
+                        daSignalLamp.TwinkleSpeed = 0;
+                        return;
+                    }
+                    if (daSignalLamp.I_Flicker==false & daSignalLamp.O_Flicker& button_State == Button_state.ON)
+                    {
+                        daSignalLamp.LampColor[0] = button_State == Button_state.ON ? daSignalLamp.Backdrop_ON : daSignalLamp.Backdrop_OFF;
+                        daSignalLamp.TwinkleSpeed = 0;
+                        return;
+                    }
+                    if (daSignalLamp.O_Flicker&button_State==Button_state.Off)
                     {
                         daSignalLamp.LampColor = daSignalLamp.O_FlickerColor;
                         daSignalLamp.TwinkleSpeed = daSignalLamp.O_FlickerTime;
@@ -287,6 +300,18 @@ namespace Bottom_Control.按钮__TO__PLC方法
                 case "DAAlarmLamp":
                     DAAlarmLamp daAlarmLamp = button as DAAlarmLamp;
                     daAlarmLamp.Text = button_State == Button_state.ON ? daAlarmLamp.Text_ON : daAlarmLamp.Text_OFF;
+                    if (daAlarmLamp.I_Flicker & daAlarmLamp.O_Flicker == false & button_State == Button_state.Off)
+                    {
+                        daAlarmLamp.LampColor[0] = button_State == Button_state.ON ? daAlarmLamp.Backdrop_ON : daAlarmLamp.Backdrop_OFF;
+                        daAlarmLamp.TwinkleSpeed = 0;
+                        return;
+                    }
+                    if (daAlarmLamp.I_Flicker == false & daAlarmLamp.O_Flicker & button_State == Button_state.ON)
+                    {
+                        daAlarmLamp.LampColor[0] = button_State == Button_state.ON ? daAlarmLamp.Backdrop_ON : daAlarmLamp.Backdrop_OFF;
+                        daAlarmLamp.TwinkleSpeed = 0;
+                        return;
+                    }
                     if (daAlarmLamp.O_Flicker & button_State == Button_state.Off)
                     {
                         daAlarmLamp.LampColor = daAlarmLamp.O_FlickerColor;

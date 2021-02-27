@@ -182,6 +182,7 @@ namespace Bottom_Control.基本控件
         private void Time_tick(object send, EventArgs e)
         {
             if (!plc_Enable|| (this.DataGridViewPLC_Time==false & this.Columns.Count<1)||(this.DataGridViewPLC_Time& this.Columns.Count<2)) return;//用户不开启PLC功能
+            if (this.IsDisposed || this.Created == false) return;
             lock (this)
             {
                 this.BeginInvoke((EventHandler)delegate

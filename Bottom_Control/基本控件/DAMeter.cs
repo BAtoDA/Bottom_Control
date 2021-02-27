@@ -97,7 +97,17 @@ namespace Bottom_Control.基本控件
         [Description("设置访问PLC小数点以下几位"), Category("PLC-控件参数")]
         [DefaultValue(typeof(int), "0")]
         public int Decimal_Below { get; set; } = 0;
-        public string Control_Text { get => Convert.ToString(this.Value); set => this.Value = Convert.ToDecimal(value); }
+        public string Control_Text
+        {
+            get => Convert.ToString(this.Value);
+            set
+            {
+                if (Convert.ToDecimal(value) < this.MaxValue)
+                    this.Value = Convert.ToDecimal(value);
+                else
+                    this.Value = 100;
+            }
+        }
         /// <summary>
         /// 定时刷新 定时器
         /// </summary>

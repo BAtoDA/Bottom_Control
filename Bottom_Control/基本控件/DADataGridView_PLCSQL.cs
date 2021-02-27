@@ -166,10 +166,9 @@ namespace Bottom_Control.基本控件
         {
             //添加控件参数
             if (!SQL_Enable) return;
+            if (this.DataSource != null || this.IsDisposed || this.Created == false) return;
             this.BeginInvoke((EventHandler)delegate
             {
-                if (this.DataSource != null) return;
-
                 using (SqlConnection sqlConnection = new SqlConnection(this.@SqlString))
                 {
                     try
@@ -202,7 +201,7 @@ namespace Bottom_Control.基本控件
         /// <param name="e"></param>
         private void Time_tick(object send, EventArgs e)
         {
-            if (!plc_Enable || !sql_Enable) return;//用户不开启PLC功能
+            if (!plc_Enable || !sql_Enable || this.IsDisposed || this.Created == false) return;//用户不开启PLC功能
             lock (this)
             {
                 List<string> Data = pLC.plc(this, this, this.Columns.Count);              

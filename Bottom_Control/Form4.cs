@@ -10,15 +10,17 @@ using System.Windows.Forms;
 
 namespace Bottom_Control
 {
-    public partial class Form2 : Form
+    public partial class Form4 : Form
     {
-        public Form2()
+        public Form4()
         {
             InitializeComponent();
         }
 
-        private void Form2_Load(object sender, EventArgs e)
+        private void Form4_Load(object sender, EventArgs e)
         {
+            this.plC_Open_Time1.Enabled = true;
+            this.plC_Open_Time1.Start();
         }
     }
 }

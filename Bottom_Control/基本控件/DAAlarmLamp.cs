@@ -148,7 +148,7 @@ namespace Bottom_Control.基本控件
         /// <param name="e"></param>
         private void Time_tick(object send, EventArgs e)
         {
-            if (!plc_Enable) return;//用户不开启PLC功能
+            if (!plc_Enable || this.IsDisposed || this.Created == false) return;//用户不开启PLC功能
 
             plc.Refresh(this, this.Plc);
 
