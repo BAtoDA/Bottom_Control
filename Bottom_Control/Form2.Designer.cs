@@ -29,67 +29,56 @@ namespace Bottom_Control
         /// </summary>
         private void InitializeComponent()
         {
-            this.daDataGridView_TO_PLCE1 = new Bottom_Control.基本控件.DADataGridView_TO_PLCE();
+            this.daSwitch1 = new Bottom_Control.基本控件.DASwitch();
+            this.plC_Open_Time1 = new Bottom_Control.设置控件.PLC_Open_Time();
             this.SuspendLayout();
             // 
-            // daDataGridView_TO_PLCE1
+            // daSwitch1
             // 
-            this.daDataGridView_TO_PLCE1.DataGridView_Name = new string[] {
-        "PLC1",
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null};
-            this.daDataGridView_TO_PLCE1.DataGridView_numerical = new Bottom_Control.numerical_format[] {
-        Bottom_Control.numerical_format.BCD_16_Bit,
-        Bottom_Control.numerical_format.BCD_16_Bit,
-        Bottom_Control.numerical_format.BCD_16_Bit,
-        Bottom_Control.numerical_format.BCD_16_Bit,
-        Bottom_Control.numerical_format.BCD_16_Bit,
-        Bottom_Control.numerical_format.BCD_16_Bit,
-        Bottom_Control.numerical_format.BCD_16_Bit,
-        Bottom_Control.numerical_format.BCD_16_Bit,
-        Bottom_Control.numerical_format.BCD_16_Bit,
-        Bottom_Control.numerical_format.BCD_16_Bit};
-            this.daDataGridView_TO_PLCE1.DataGridViewPLC_Time = false;
-            this.daDataGridView_TO_PLCE1.Location = new System.Drawing.Point(24, 12);
-            this.daDataGridView_TO_PLCE1.Name = "daDataGridView_TO_PLCE1";
-            this.daDataGridView_TO_PLCE1.PLC_address = new double[] {
-        0D,
-        0D,
-        0D,
-        0D,
-        0D,
-        0D,
-        0D,
-        0D,
-        0D,
-        0D};
-            this.daDataGridView_TO_PLCE1.PLC_Address = "0";
-            this.daDataGridView_TO_PLCE1.PLC_Contact = "D";
-            this.daDataGridView_TO_PLCE1.PLC_Enable = true;
-            this.daDataGridView_TO_PLCE1.Size = new System.Drawing.Size(209, 146);
-            this.daDataGridView_TO_PLCE1.TabIndex = 0;
+            this.daSwitch1.BackColor = System.Drawing.Color.Transparent;
+            this.daSwitch1.Backdrop_OFF = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(131)))), ((int)(((byte)(229)))));
+            this.daSwitch1.Backdrop_ON = System.Drawing.Color.Lime;
+            this.daSwitch1.Checked = false;
+            this.daSwitch1.FalseColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(189)))), ((int)(((byte)(189)))));
+            this.daSwitch1.FalseTextColr = System.Drawing.Color.White;
+            this.daSwitch1.Location = new System.Drawing.Point(427, 176);
+            this.daSwitch1.Name = "daSwitch1";
+            this.daSwitch1.Pattern = Bottom_Control.Button_pattern.selector_witch;
+            this.daSwitch1.Plc = Bottom_Control.PLC.Siemens;
+            this.daSwitch1.PLC_Address = "0.0";
+            this.daSwitch1.PLC_Contact = "Q";
+            this.daSwitch1.PLC_Enable = true;
+            this.daSwitch1.Size = new System.Drawing.Size(83, 31);
+            this.daSwitch1.SwitchType = HZH_Controls.Controls.SwitchType.Ellipse;
+            this.daSwitch1.TabIndex = 0;
+            this.daSwitch1.Texts = null;
+            this.daSwitch1.TrueColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(59)))));
+            this.daSwitch1.TrueTextColr = System.Drawing.Color.White;
+            // 
+            // plC_Open_Time1
+            // 
+            this.plC_Open_Time1.Interval = 500;
+            this.plC_Open_Time1.ModBusIP = "192.168.3.20";
+            this.plC_Open_Time1.Siemens_Open = true;
+            this.plC_Open_Time1.SiemensIP = "192.168.3.2";
+            this.plC_Open_Time1.siemensPLCS = HslCommunication.Profinet.SiemensPLCS.S200Smart;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.daDataGridView_TO_PLCE1);
+            this.Controls.Add(this.daSwitch1);
             this.Name = "Form2";
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private 基本控件.DADataGridView_TO_PLCE daDataGridView_TO_PLCE1;
+        private 设置控件.PLC_Open_Time plC_Open_Time1;
+        private 基本控件.DASwitch daSwitch1;
     }
 }

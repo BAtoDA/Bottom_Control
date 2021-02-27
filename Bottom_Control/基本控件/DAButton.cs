@@ -34,6 +34,13 @@ namespace Bottom_Control
     {
         #region 实现接口参数
         public event EventHandler Modification;
+        [Description("是否启用PLC功能"), Category("PLC类型")]
+        public bool PLC_Enable
+        {
+            get => plc_Enable;
+            set => plc_Enable = value;
+        }
+        private bool plc_Enable = false;
         [Description("选择PLC类型\r\n默认三菱PLC"), Category("PLC类型")]
         [DefaultValue(typeof(PLC), "Mitsubishi")]
         public PLC Plc
@@ -47,16 +54,10 @@ namespace Bottom_Control
                     this.Modification(Convert.ToInt32(pLC_valu), new EventArgs());
                     this.Modification -= new EventHandler(Modifications_Eeve);
                 }
+                pLC_valu = value;
             }
         }
-        private PLC pLC_valu;
-        [Description("是否启用PLC功能"), Category("PLC类型")]
-        public bool PLC_Enable
-        {
-            get => plc_Enable;
-            set=> plc_Enable = value;
-        }
-        private bool plc_Enable = false;
+        private PLC pLC_valu=PLC.Mitsubishi;
 
         public void Modifications_Eeve(object send,EventArgs e)
         {
@@ -160,9 +161,13 @@ namespace Bottom_Control
         private void Time_tick(object send, EventArgs e)
         {
             if (!plc_Enable) return;//用户不开启PLC功能
-
-            plc.Refresh(this, this.Plc);
-
+            lock (this)
+            {
+                this.BeginInvoke((MethodInvoker)delegate
+                {
+                    plc.Refresh(this, this.Plc);
+                });
+            }
         }
     }
 }

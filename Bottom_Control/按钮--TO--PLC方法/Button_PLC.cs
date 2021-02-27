@@ -245,6 +245,7 @@ namespace Bottom_Control.按钮__TO__PLC方法
                     daSwitch.Text = button_State == Button_state.ON ? daSwitch.Text_ON : daSwitch.Text_OFF;
                     daSwitch.FalseColor = daSwitch.Backdrop_OFF;
                     daSwitch.TrueColor = daSwitch.Backdrop_ON;
+                    daSwitch.Checked = Convert.ToBoolean(button_State);
                     break;
                 case "DAConduit":
                     DAConduit daConduit = button as DAConduit;

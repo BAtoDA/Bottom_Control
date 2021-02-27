@@ -47,6 +47,7 @@ namespace Bottom_Control.基本控件
                     this.Modification(Convert.ToInt32(pLC_valu), new EventArgs());
                     this.Modification -= new EventHandler(Modifications_Eeve);
                 }
+                pLC_valu = value;
             }
         }
         private PLC pLC_valu;
@@ -166,7 +167,7 @@ namespace Bottom_Control.基本控件
         /// <param name="e"></param>
         private void Time_tick(object send, EventArgs e)
         {
-            if (!plc_Enable|| this.Columns.Count<1) return;//用户不开启PLC功能
+            if (!plc_Enable|| (this.DataGridViewPLC_Time==false & this.Columns.Count<1)||(this.DataGridViewPLC_Time& this.Columns.Count<2)) return;//用户不开启PLC功能
             lock (this)
             {
                 this.BeginInvoke((EventHandler)delegate

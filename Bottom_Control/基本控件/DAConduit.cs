@@ -45,6 +45,7 @@ namespace Bottom_Control.基本控件
                     this.Modification(Convert.ToInt32(pLC_valu), new EventArgs());
                     this.Modification -= new EventHandler(Modifications_Eeve);
                 }
+                pLC_valu = value;
             }
         }
         private PLC pLC_valu;

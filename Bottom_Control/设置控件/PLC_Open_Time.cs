@@ -145,26 +145,26 @@ namespace Bottom_Control.设置控件
                 Task.Run(() =>
                 {
                     //配置PLC参数
-                    Mitsubishi.IPEndPoint.Address = Mitsubishi_ip;
-                    Mitsubishi.IPEndPoint.Port = MitsubishiPort;
-                    Siemens.IPEndPoint.Address = ModBus_ip;
-                    Siemens = new Siemens_realize(Siemens.IPEndPoint,siemensPLCS);
-                    MODBUD_TCP.IPEndPoint.Address = ModBus_ip;
-                    MODBUD_TCP.IPEndPoint.Port = ModBusPort;
                     if (Mitsubishi_Open & !Mitsubishi.PLC_ready)
                     {
+                        Mitsubishi.IPEndPoint.Address = Mitsubishi_ip;
+                        Mitsubishi.IPEndPoint.Port = MitsubishiPort;
                         Mitsubishi.PLC_open();
                         if (Mitsubishi.PLCerr_content != null)
                             this.PLC_errEvent(Mitsubishi.PLCerr_content, new EventArgs());
                     }
                     if (Siemens_Open & !Siemens.PLC_ready)
                     {
+                        Siemens.IPEndPoint.Address = Siemens_ip;
+                        Siemens = new Siemens_realize(Siemens.IPEndPoint, siemensPLCS);
                         Siemens.PLC_open();
                         if (Siemens.PLCerr_content != null)
                             this.PLC_errEvent(Siemens.PLCerr_content, new EventArgs());
                     }
                     if (ModBus_Open & !MODBUD_TCP.IPLC_interface_PLC_ready)
                     {
+                        MODBUD_TCP.IPEndPoint.Address = ModBus_ip;
+                        MODBUD_TCP.IPEndPoint.Port = ModBusPort;
                         MODBUD_TCP.IPLC_interface_PLC_open();
                         if (MODBUD_TCP.IPLC_interface_PLCerr_content != null)
                             this.PLC_errEvent(MODBUD_TCP.IPLC_interface_PLCerr_content, new EventArgs());
