@@ -26,7 +26,7 @@ namespace Bottom_Control.设置控件
     /// </summary>
     [Browsable(true)]
     [Description("PLC后台定时打开,刷新,重新链接控件")]
-    class PLC_Open_Time:Timer
+    public class PLC_Open_Time:Timer
     {
         #region 三菱PLC配置属性
         [Description("根据PLC 提供的IP进行填写 三菱PLC需要在以太网配置里拖拽出SLMP设备并且配置好IP与端口"), Category("三菱PLC参数")]
