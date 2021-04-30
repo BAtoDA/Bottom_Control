@@ -26,7 +26,7 @@ namespace Bottom_Control.基本控件
     [ToolboxItem(true)]
     [Browsable(true)]
     [Description("实现上位机底层控件 风扇类 -不再公共运行时")]
-    class DARotor: UCRotor, Button_base
+    public class DARotor: UCRotor, Button_base
     {
         #region 实现接口参数
         public event EventHandler Modification;

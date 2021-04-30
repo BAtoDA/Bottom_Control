@@ -30,7 +30,7 @@ namespace Bottom_Control.基本控件
     [ToolboxItem(false)]
     [Browsable(true)]
     [Description("实现上位机底层控件 定时从PLC自定寄存器读取数据  PLC读取表格类 -不再公共运行时")]
-    class DADataGridView_TO_PLC: SkinDataGridView, TextBox_base, DataGridViewPLC_base
+    public class DADataGridView_TO_PLC: SkinDataGridView, TextBox_base, DataGridViewPLC_base
     {
         #region 实现接口参数
         public event EventHandler Modification;

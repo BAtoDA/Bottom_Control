@@ -29,7 +29,7 @@ namespace Bottom_Control.基本控件
     [ToolboxItem(true)]
     [Browsable(true)]
     [Description("实现从PLC侧读取自定类型数据 产生二维码或者条形码")]
-    class DAIhatetheqrcode_PLC : PictureBox, TextBox_base
+    public class DAIhatetheqrcode_PLC : PictureBox, TextBox_base
     {
         #region 实现接口参数
         public event EventHandler Modification;

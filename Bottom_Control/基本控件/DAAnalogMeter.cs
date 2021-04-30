@@ -29,7 +29,7 @@ namespace Bottom_Control.基本控件
     [ToolboxItem(true)]
     [Browsable(true)]
     [Description("实现上位机底层控件 表盘类 -不再公共运行时 ")]
-    class DAAnalogMeter: UIAnalogMeter, TextBox_base
+    public class DAAnalogMeter: UIAnalogMeter, TextBox_base
     {
         #region 实现接口参数
         public event EventHandler Modification;

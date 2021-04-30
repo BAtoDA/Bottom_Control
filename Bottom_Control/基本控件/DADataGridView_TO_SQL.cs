@@ -27,7 +27,7 @@ namespace Bottom_Control.基本控件
     [ToolboxItem(true)]
     [Browsable(true)]
     [Description("实现上位机底层控件 表格控件从SQL进行增删改查操作")]
-    class DADataGridView_TO_SQL : SkinDataGridView
+    public class DADataGridView_TO_SQL : SkinDataGridView
     {
         #region
         [Description("SQL链接字符串--仅支持用户名 密码 登录不支持Win身份登录 字符串需要写明需要链接的数据库名 注意仅支持SQL Server"), Category("SQL-控件参数")]

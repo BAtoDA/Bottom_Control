@@ -31,7 +31,7 @@ namespace Bottom_Control.基本控件
     [ToolboxItem(true)]
     [Browsable(true)]
     [Description("实现从PLC出读取自定寄存器进行圆形图显示 -不再公共运行时")]
-    class Doughnut_PLC : Chart, TextBox_base, DataGridViewPLC_base, Doughnut_Base
+    public class Doughnut_PLC : Chart, TextBox_base, DataGridViewPLC_base, Doughnut_Base
     {
         #region 实现接口参数
         public event EventHandler Modification;

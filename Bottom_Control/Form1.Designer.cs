@@ -29,10 +29,12 @@ namespace Bottom_Control
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.plC_Open_Time1 = new Bottom_Control.设置控件.PLC_Open_Time();
             this.ucWaveChart1 = new HZH_Controls.Controls.UCWaveChart();
             this.ucValve1 = new HZH_Controls.Controls.UCValve();
             this.ucConveyor1 = new HZH_Controls.Controls.UCConveyor();
+            this.daButton1 = new Bottom_Control.DAButton();
             this.SuspendLayout();
             // 
             // plC_Open_Time1
@@ -40,6 +42,7 @@ namespace Bottom_Control
             this.plC_Open_Time1.Interval = 500;
             this.plC_Open_Time1.Mitsubishi_Open = true;
             this.plC_Open_Time1.ModBusIP = "192.168.3.20";
+            this.plC_Open_Time1.siemensPLCS = HslCommunication.Profinet.SiemensPLCS.S200Smart;
             // 
             // ucWaveChart1
             // 
@@ -90,11 +93,32 @@ namespace Bottom_Control
             this.ucConveyor1.Size = new System.Drawing.Size(300, 50);
             this.ucConveyor1.TabIndex = 10;
             // 
+            // daButton1
+            // 
+            this.daButton1.BackColor = System.Drawing.Color.Transparent;
+            this.daButton1.Backdrop_OFF = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(131)))), ((int)(((byte)(229)))));
+            this.daButton1.Backdrop_ON = System.Drawing.Color.Lime;
+            this.daButton1.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.daButton1.DownBack = null;
+            this.daButton1.Location = new System.Drawing.Point(138, 128);
+            this.daButton1.MouseBack = null;
+            this.daButton1.Name = "daButton1";
+            this.daButton1.NormlBack = null;
+            this.daButton1.Pattern = Bottom_Control.Button_pattern.Regression;
+            this.daButton1.PLC_Address = "0";
+            this.daButton1.PLC_Contact = "X";
+            this.daButton1.PLC_Enable = false;
+            this.daButton1.Size = new System.Drawing.Size(132, 86);
+            this.daButton1.TabIndex = 11;
+            this.daButton1.Text = "daButton1";
+            this.daButton1.UseVisualStyleBackColor = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1065, 563);
+            this.Controls.Add(this.daButton1);
             this.Controls.Add(this.ucConveyor1);
             this.Controls.Add(this.ucValve1);
             this.Controls.Add(this.ucWaveChart1);
@@ -111,5 +135,6 @@ namespace Bottom_Control
         private HZH_Controls.Controls.UCWaveChart ucWaveChart1;
         private HZH_Controls.Controls.UCValve ucValve1;
         private HZH_Controls.Controls.UCConveyor ucConveyor1;
+        private DAButton daButton1;
     }
 }
