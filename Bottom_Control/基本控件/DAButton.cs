@@ -53,6 +53,7 @@ namespace Bottom_Control
                     this.Modification += new EventHandler(Modifications_Eeve);
                     this.Modification(Convert.ToInt32(pLC_valu), new EventArgs());
                     this.Modification -= new EventHandler(Modifications_Eeve);
+                    return;
                 }
                 pLC_valu = value;
             }
