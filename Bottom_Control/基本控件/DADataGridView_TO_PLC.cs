@@ -30,7 +30,7 @@ namespace Bottom_Control.基本控件
     [ToolboxItem(false)]
     [Browsable(true)]
     [Description("实现上位机底层控件 定时从PLC自定寄存器读取数据  PLC读取表格类 -不再公共运行时")]
-    public class DADataGridView_TO_PLC: SkinDataGridView, TextBox_base, DataGridViewPLC_base
+    public class DADataGridView_TO_PLC: DataGridView, TextBox_base, DataGridViewPLC_base
     {
         #region 实现接口参数
         public event EventHandler Modification;
@@ -136,8 +136,20 @@ namespace Bottom_Control.基本控件
             pLC = new DataGridView_PLC();
 
         }
+        /// <summary>
+        /// 判断程序是否在运行
+        /// true 该程序在电脑进程运行中  false 表示不在进程运行
+        /// 该方法主要用于避免继承过程中CLR 进入SQL数据库 查询数据从而卡死软件
+        /// </summary>
+        /// <param name="Name"></param>
+        /// <returns></returns>
+        public bool GetPidByProcess(string Name = "Bottom_Control")
+        {
+            return System.Diagnostics.Process.GetProcessesByName(Name).ToList().Count > 0 ? true : false;
+        }
         public void OnParentChanged1(EventArgs e)//加载状态栏
         {
+            if (!GetPidByProcess()) return;
             //添加控件参数
             this.Columns.Clear();
             for (int i = 0; i < 10; i++)

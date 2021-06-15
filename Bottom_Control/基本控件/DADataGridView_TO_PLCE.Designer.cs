@@ -59,7 +59,6 @@ namespace Bottom_Control.基本控件
             | System.Windows.Forms.AnchorStyles.Right)));
             this.daDataGridView_TO_PLC2.BackgroundColor = System.Drawing.SystemColors.Window;
             this.daDataGridView_TO_PLC2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.daDataGridView_TO_PLC2.ColumnFont = null;
             this.daDataGridView_TO_PLC2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(239)))));
@@ -70,7 +69,6 @@ namespace Bottom_Control.基本控件
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.daDataGridView_TO_PLC2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.daDataGridView_TO_PLC2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.daDataGridView_TO_PLC2.ColumnSelectForeColor = System.Drawing.SystemColors.HighlightText;
             this.daDataGridView_TO_PLC2.Control_Text = "";
             this.daDataGridView_TO_PLC2.DataGridView_Name = new string[] {
         null,
@@ -105,8 +103,7 @@ namespace Bottom_Control.基本控件
             this.daDataGridView_TO_PLC2.DefaultCellStyle = dataGridViewCellStyle3;
             this.daDataGridView_TO_PLC2.EnableHeadersVisualStyles = false;
             this.daDataGridView_TO_PLC2.GridColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.daDataGridView_TO_PLC2.HeadFont = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.daDataGridView_TO_PLC2.HeadSelectForeColor = System.Drawing.SystemColors.HighlightText;
+
             this.daDataGridView_TO_PLC2.Location = new System.Drawing.Point(3, 0);
             this.daDataGridView_TO_PLC2.Name = "daDataGridView_TO_PLC2";
             this.daDataGridView_TO_PLC2.numerical = Bottom_Control.numerical_format.Signed_16_Bit;
@@ -134,9 +131,7 @@ namespace Bottom_Control.基本控件
             this.daDataGridView_TO_PLC2.RowTemplate.Height = 23;
             this.daDataGridView_TO_PLC2.Size = new System.Drawing.Size(187, 314);
             this.daDataGridView_TO_PLC2.TabIndex = 0;
-            this.daDataGridView_TO_PLC2.TitleBack = null;
-            this.daDataGridView_TO_PLC2.TitleBackColorBegin = System.Drawing.Color.White;
-            this.daDataGridView_TO_PLC2.TitleBackColorEnd = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(196)))), ((int)(((byte)(242)))));
+
             // 
             // DADataGridView_TO_PLCE
             // 

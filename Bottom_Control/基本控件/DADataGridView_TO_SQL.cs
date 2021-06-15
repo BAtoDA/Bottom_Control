@@ -27,7 +27,7 @@ namespace Bottom_Control.基本控件
     [ToolboxItem(true)]
     [Browsable(true)]
     [Description("实现上位机底层控件 表格控件从SQL进行增删改查操作")]
-    public class DADataGridView_TO_SQL : SkinDataGridView
+    public class DADataGridView_TO_SQL : DataGridView
     {
         #region
         [Description("SQL链接字符串--仅支持用户名 密码 登录不支持Win身份登录 字符串需要写明需要链接的数据库名 注意仅支持SQL Server"), Category("SQL-控件参数")]
@@ -61,8 +61,20 @@ namespace Bottom_Control.基本控件
         {
             gridView_SQL = new DADataGridView_SQL(this.SqlString,SqlSurface_Name);
         }
+        /// <summary>
+        /// 判断程序是否在运行
+        /// true 该程序在电脑进程运行中  false 表示不在进程运行
+        /// 该方法主要用于避免继承过程中CLR 进入SQL数据库 查询数据从而卡死软件
+        /// </summary>
+        /// <param name="Name"></param>
+        /// <returns></returns>
+        public bool GetPidByProcess(string Name = "Bottom_Control")
+        {
+            return System.Diagnostics.Process.GetProcessesByName(Name).ToList().Count > 0 ? true : false;
+        }
         protected override void OnParentChanged(EventArgs e)//加载状态栏
         {
+            if (!GetPidByProcess()) return;
             //添加控件参数
             if (!SQL_Enable) return;
             this.BeginInvoke((EventHandler)delegate

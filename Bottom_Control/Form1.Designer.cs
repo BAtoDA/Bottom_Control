@@ -30,9 +30,30 @@ namespace Bottom_Control
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.daButton1 = new Bottom_Control.DAButton();
             this.daButton2 = new Bottom_Control.DAButton();
+            this.daButton1 = new Bottom_Control.DAButton();
             this.SuspendLayout();
+            // 
+            // daButton2
+            // 
+            this.daButton2.BackColor = System.Drawing.Color.Transparent;
+            this.daButton2.Backdrop_OFF = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(131)))), ((int)(((byte)(229)))));
+            this.daButton2.Backdrop_ON = System.Drawing.Color.Lime;
+            this.daButton2.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.daButton2.DownBack = null;
+            this.daButton2.Location = new System.Drawing.Point(426, 124);
+            this.daButton2.MouseBack = null;
+            this.daButton2.Name = "daButton2";
+            this.daButton2.NormlBack = null;
+            this.daButton2.Pattern = Bottom_Control.Button_pattern.Regression;
+            this.daButton2.Plc = Bottom_Control.PLC.Siemens;
+            this.daButton2.PLC_Address = "0";
+            this.daButton2.PLC_Contact = "I";
+            this.daButton2.PLC_Enable = true;
+            this.daButton2.Size = new System.Drawing.Size(109, 64);
+            this.daButton2.TabIndex = 1;
+            this.daButton2.Text = "daButton2";
+            this.daButton2.UseVisualStyleBackColor = false;
             // 
             // daButton1
             // 
@@ -49,31 +70,10 @@ namespace Bottom_Control
             this.daButton1.PLC_Address = "0";
             this.daButton1.PLC_Contact = "X";
             this.daButton1.PLC_Enable = false;
-            this.daButton1.Size = new System.Drawing.Size(120, 78);
+            this.daButton1.Size = new System.Drawing.Size(117, 42);
             this.daButton1.TabIndex = 0;
             this.daButton1.Text = "daButton1";
             this.daButton1.UseVisualStyleBackColor = false;
-            // 
-            // daButton2
-            // 
-            this.daButton2.BackColor = System.Drawing.Color.Transparent;
-            this.daButton2.Backdrop_OFF = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(131)))), ((int)(((byte)(229)))));
-            this.daButton2.Backdrop_ON = System.Drawing.Color.Lime;
-            this.daButton2.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.daButton2.DownBack = null;
-            this.daButton2.Location = new System.Drawing.Point(491, 170);
-            this.daButton2.MouseBack = null;
-            this.daButton2.Name = "daButton2";
-            this.daButton2.NormlBack = null;
-            this.daButton2.Pattern = Bottom_Control.Button_pattern.Regression;
-            this.daButton2.Plc = Bottom_Control.PLC.Siemens;
-            this.daButton2.PLC_Address = "0";
-            this.daButton2.PLC_Contact = "I";
-            this.daButton2.PLC_Enable = true;
-            this.daButton2.Size = new System.Drawing.Size(75, 23);
-            this.daButton2.TabIndex = 1;
-            this.daButton2.Text = "daButton2";
-            this.daButton2.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 
